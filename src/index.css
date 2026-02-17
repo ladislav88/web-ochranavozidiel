@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 207 54% 51%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 64%;
+
+    --accent: 17 77% 52%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 207 54% 51%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 240 5% 85%;
+    --sidebar-primary: 240 6% 90%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 240 6% 90%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 207 54% 51%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 64%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 224 76% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-balance;
+  }
+}
+
+/* Custom styles */
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3a86c9] to-[#e06329];
+  }
+
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20;
+  }
+  
+  .glassmorphism {
+    @apply bg-black/70 backdrop-blur-lg border border-white/10;
+  }
+  
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-balance;
+  }
+  
+  .section-subtitle {
+    @apply text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto mb-8 md:mb-12 text-balance;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .stagger-animate > * {
+    opacity: 0;
+    animation: text-reveal forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+  }
+  
+  .stagger-animate > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-animate > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-animate > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-animate > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-animate > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-animate > *:nth-child(6) { animation-delay: 0.6s; }
+  
+  .button-animation {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button-animation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.6s;
+  }
+  
+  .button-animation:hover::after {
+    left: 100%;
+  }
+  
+  /* Form Styling */
+  .form-input-transition {
+    @apply transition-all duration-200;
+  }
+  
+  .form-label-floating {
+    @apply transform transition-all duration-200;
+  }
+  
+  .form-focus-ring {
+    @apply focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500/50;
+  }
+  
+  .form-glow {
+    box-shadow: 0 0 15px rgba(58, 134, 201, 0.15);
+  }
+  
+  /* Form section styling */
+  .form-section {
+    @apply relative rounded-xl overflow-hidden;
+  }
+  
+  .form-section::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-orange-500/5 pointer-events-none;
+  }
+  
+  /* Form field accents */
+  .field-accent {
+    @apply text-blue-400 mr-2;
+  }
+  
+  /* Shimmer animation for buttons */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+    }
+  }
+}

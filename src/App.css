@@ -1,0 +1,110 @@
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.read-the-docs {
+  color: #666;
+}
+
+/* Hero section specific styles */
+section.hero-section {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.text-orange {
+  color: #e06329;
+}
+
+.bg-orange {
+  background-color: #e06329;
+}
+
+/* Global heading styles */
+h1.gradient-heading,
+h2.gradient-heading,
+h3.gradient-heading {
+  @apply bg-gradient-to-r from-[#3a86c9] to-[#e06329] bg-clip-text text-transparent font-bold tracking-tight;
+}
+
+/* Image styling for consistency */
+.image-consistent {
+  @apply w-full h-full object-cover object-center opacity-30;
+}
+
+.image-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black;
+}
+
+/* Canvas background styling - updated for better visibility */
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  overflow: hidden;
+}
+
+/* Body background to ensure canvas backdrop is visible */
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
