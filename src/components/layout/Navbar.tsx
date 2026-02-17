@@ -61,7 +61,7 @@ const Navbar = () => {
               <Mail className="h-3.5 w-3.5 mr-1.5" />
               <span>info@ochranavozidiel.sk</span>
             </a>
-            <a href="tel:+421911911876" className="flex items-center hover:text-[#e06329] transition-colors">
+            <a href="tel:+421911911876" className="flex items-center text-red-500 hover:text-red-400 transition-colors">
               <Phone className="h-3.5 w-3.5 mr-1.5" />
               <span>+421 911 911 876</span>
             </a>
