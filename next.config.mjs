@@ -62,8 +62,6 @@ const nextConfig = {
       { source: '/referencie-2/', destination: '/' },
       { source: '/referencie-od-vas', destination: '/' },
       { source: '/referencie-od-vas/', destination: '/' },
-      { source: '/certifikaty', destination: '/' },
-      { source: '/certifikaty/', destination: '/' },
       { source: '/dielna', destination: '/' },
       { source: '/dielna/', destination: '/' },
       { source: '/nasa-praca', destination: '/' },

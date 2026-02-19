@@ -18,6 +18,7 @@ const navLinks = [
   { name: 'Sofistikované zabezpečenie', href: '/sofistikovane-zabezpecenie' },
   { name: 'Pasívny monitoring', href: '/pasivny-monitoring' },
   { name: 'Parkovacie senzory', href: '/parkovacie-senzory' },
+  { name: 'Certifikáty', href: '/certifikaty' },
   { name: 'Kontakt', href: '/kontakt' },
 ];
 
