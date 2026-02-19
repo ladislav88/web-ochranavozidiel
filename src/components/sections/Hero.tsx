@@ -7,7 +7,7 @@ import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT, HERO_HEIGHT_PX } from '@/co
 const Hero = () => {
   return (
     <section
-      className="fixed top-0 left-0 right-0 z-30 overflow-hidden bg-black flex items-center justify-center w-full"
+      className="relative overflow-hidden bg-black flex items-center justify-center w-full"
       style={{ height: HERO_HEIGHT_PX }}
     >
       {/* Hero Background Image - WebP pre výkon */}

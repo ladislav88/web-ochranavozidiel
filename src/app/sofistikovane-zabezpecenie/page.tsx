@@ -6,7 +6,6 @@ import HowItWorksSections from '@/components/sections/HowItWorksSections';
 import FunctionalitySection from '@/components/sections/FunctionalitySection';
 import InstallationProcess from '@/components/sections/InstallationProcess';
 import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
-import { HERO_HEIGHT_PX } from '@/constants/hero';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/sofistikovane-zabezpecenie/';
@@ -34,17 +33,15 @@ export default function SofistikovaneZabezpeceniePage() {
   return (
     <>
       <NavbarNext />
-      <main className="relative">
+      <main className="pt-20 divide-y divide-zinc-900/30">
         <PageHeader
           title="Sofistikované zabezpečenie"
           subtitle="Dokonalá ochrana vozidla bez ovládača"
         />
-        <div className="relative z-40 divide-y divide-zinc-900/30" style={{ paddingTop: HERO_HEIGHT_PX }}>
-          <HowItWorksSections />
+        <HowItWorksSections />
         <FunctionalitySection />
         <InstallationProcess />
         <TechnicalSpecifications />
-        </div>
       </main>
       <Footer />
     </>

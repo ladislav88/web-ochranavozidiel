@@ -6,7 +6,6 @@ import PageHeader from '@/components/sections/PageHeader';
 import { Mail, Phone, Globe, Building, CreditCard, FileText } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Card, CardContent } from '@/components/ui/card';
-import { HERO_HEIGHT_PX } from '@/constants/hero';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/kontakt/';
@@ -33,16 +32,13 @@ export default function KontaktPage() {
   return (
     <>
       <NavbarNext />
-      <main className="relative">
+      <main className="pt-20">
         <PageHeader
           title="Kontaktujte nás"
           subtitle="Sme tu pre vás v prípade akýchkoľvek otázok"
         />
 
-        <div
-          className="relative z-40 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16"
-          style={{ paddingTop: HERO_HEIGHT_PX }}
-        >
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
             <div className="glassmorphism rounded-xl p-8 mb-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>

@@ -11,7 +11,7 @@ interface PageHeaderProps {
 const PageHeader = ({ title, subtitle, imageSrc = HERO_BACKGROUND_IMAGE }: PageHeaderProps) => {
   return (
     <section
-      className="fixed top-0 left-0 right-0 z-30 flex items-center justify-center overflow-hidden w-full bg-black"
+      className="relative flex items-center justify-center overflow-hidden w-full bg-black"
       style={{ height: HERO_HEIGHT_PX }}
     >
       {/* Header background image - WebP pre výkon */}

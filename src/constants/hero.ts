@@ -5,5 +5,5 @@ export const HERO_BACKGROUND_IMAGE = '/ochrana-vozidla-zlodej-kradez-auta-hero.w
 export const HERO_BACKGROUND_ALT =
   'Krádež auta - zlodej sa pokúša vylámať vozidlo, dôvod prečo potrebujete ochranu vozidiel a autoalarm';
 
-/** Fixná výška hero sekcie vsade (px) - hero sa neposúva pri scrollovaní */
+/** Fixná výška hero sekcie vsade (px) */
 export const HERO_HEIGHT_PX = 600;
