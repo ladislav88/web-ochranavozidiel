@@ -6,6 +6,7 @@ import Contact from '@/components/sections/Contact';
 import Reviews from '@/components/sections/Reviews';
 import HowItWorksSections from '@/components/sections/HowItWorksSections';
 import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
+import StatsTimeline from '@/components/sections/StatsTimeline';
 import Hero from '@/components/sections/Hero';
 import HomePageClient from './HomePageClient';
 
@@ -38,6 +39,7 @@ export default function HomePage() {
         <Hero />
         <div className="space-y-0 divide-y divide-zinc-900/30 w-full">
           <About />
+          <StatsTimeline />
           <HowItWorksSections />
           <TechnicalSpecifications />
           <Reviews />

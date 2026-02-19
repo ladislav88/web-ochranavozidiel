@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT } from '@/constants/hero';
 import NavbarNext from '@/components/layout/NavbarNext';
 import Footer from '@/components/layout/Footer';
 import AutoPlayYouTube from '@/components/AutoPlayYouTube';
@@ -198,8 +199,17 @@ export default function ParkovacieSenzoryPage() {
 
       <main className="pt-20">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-zinc-900 to-black py-20 md:py-28">
-          <div className="container mx-auto px-4 sm:px-6 xl:px-10 text-center">
+        <section className="relative overflow-hidden bg-black py-20 md:py-28">
+          <div className="absolute inset-0 w-full h-full">
+            <img
+              src={HERO_BACKGROUND_IMAGE}
+              alt={HERO_BACKGROUND_ALT}
+              className="w-full h-full object-cover object-center opacity-30"
+              fetchPriority="high"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/80 via-zinc-900/60 to-black" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 xl:px-10 text-center relative z-10">
             <h1 className="mx-auto max-w-prose text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
               Parkovacie snímače (senzory) – profesionálna montáž v Trenčíne
             </h1>

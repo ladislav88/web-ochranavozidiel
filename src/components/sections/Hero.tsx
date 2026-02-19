@@ -1,18 +1,19 @@
-
 import React from 'react';
 import FadeIn from '../animations/FadeIn';
 import { Shield, Car } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT } from '@/constants/hero';
 
 const Hero = () => {
   return (
     <section className="relative min-h-[600px] overflow-hidden bg-black flex items-center justify-center w-full py-16">
-      {/* Hero Background Image */}
+      {/* Hero Background Image - WebP pre výkon */}
       <div className="absolute inset-0 w-full h-full">
-        <img 
-          src="/lovable-uploads/ee024d7c-8a60-425c-9be7-01068775ae7c.png" 
-          alt="Car security system" 
+        <img
+          src={HERO_BACKGROUND_IMAGE}
+          alt={HERO_BACKGROUND_ALT}
           className="w-full h-full object-cover object-center opacity-30"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black"></div>
       </div>

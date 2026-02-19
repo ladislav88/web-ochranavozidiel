@@ -33,7 +33,6 @@ export default function PasivnyMonitoringPage() {
         <PageHeader
           title="Pasívny monitoring"
           subtitle="GPS a GSM lokalizácia vozidiel"
-          imageSrc="/lovable-uploads/ee024d7c-8a60-425c-9be7-01068775ae7c.png"
         />
         <section className="section-container">
           <div className="max-w-prose mx-auto text-muted-foreground space-y-4">

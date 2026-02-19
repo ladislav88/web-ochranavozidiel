@@ -37,7 +37,6 @@ export default function SofistikovaneZabezpeceniePage() {
         <PageHeader
           title="Sofistikované zabezpečenie"
           subtitle="Dokonalá ochrana vozidla bez ovládača"
-          imageSrc="/lovable-uploads/ee024d7c-8a60-425c-9be7-01068775ae7c.png"
         />
         <HowItWorksSections />
         <FunctionalitySection />

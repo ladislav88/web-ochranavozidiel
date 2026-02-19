@@ -36,7 +36,6 @@ export default function KontaktPage() {
         <PageHeader
           title="Kontaktujte nás"
           subtitle="Sme tu pre vás v prípade akýchkoľvek otázok"
-          imageSrc="/lovable-uploads/ee024d7c-8a60-425c-9be7-01068775ae7c.png"
         />
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
