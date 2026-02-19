@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import '@/index.css';
-import AnimatedBackground from '@/components/animations/AnimatedBackground';
+
+const AnimatedBackground = dynamic(
+  () => import('@/components/animations/AnimatedBackground'),
+  { ssr: false }
+);
 
 export const dynamic = 'force-dynamic';
 import { Toaster } from '@/components/ui/toaster';
