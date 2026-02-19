@@ -64,7 +64,7 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <FadeIn className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Cenník systému IGLA</h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-muted-foreground max-w-prose mx-auto">
             Vyberte si variant, ktorý najviac vyhovuje vašim požiadavkám na ochranu vozidla
           </p>
         </FadeIn>

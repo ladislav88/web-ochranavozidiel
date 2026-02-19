@@ -24,7 +24,7 @@ const FeatureCard = ({ icon, title, description, delay }: FeatureCardProps) => (
         {icon}
       </div>
       <h3 className="font-display text-xl font-semibold mb-3 text-white text-balance text-center">{title}</h3>
-      <p className="text-zinc-400 text-center">{description}</p>
+      <p className="text-zinc-400 text-center max-w-[70ch] mx-auto">{description}</p>
     </div>
   </FadeIn>
 );
@@ -79,28 +79,29 @@ const Features = () => {
       <div className="absolute top-40 -left-64 w-96 h-96 rounded-full bg-[#e06329]/5 blur-3xl -z-10" />
       <div className="absolute bottom-40 -right-64 w-96 h-96 rounded-full bg-[#e06329]/5 blur-3xl -z-10" />
       
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-8 stagger-animate">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="text-center max-w-prose mx-auto mb-8 stagger-animate">
           <div className="mb-3">
             <span className="inline-block px-4 py-1.5 text-sm font-medium bg-[#e06329]/10 text-[#e06329] rounded-full">
               Výhody systému IGLA
             </span>
           </div>
-          <h2 className="section-title text-white text-3xl md:text-4xl font-bold mb-3 text-balance max-w-2xl mx-auto">Prečo je IGLA najlepšou voľbou pre vaše vozidlo</h2>
+          <h2 className="section-title text-white text-3xl md:text-4xl font-bold mb-3 text-balance max-w-prose mx-auto">Prečo je IGLA najlepšou voľbou pre vaše vozidlo</h2>
           <p className="section-subtitle text-zinc-400 text-lg">
             Systém IGLA ponúka niekoľko kľúčových výhod, ktoré ho robia najlepším bezpečnostným riešením pre vaše vozidlo.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-12 gap-6">
           {features.map((feature, index) => (
+            <div key={index} className="col-span-12 md:col-span-6 lg:col-span-4">
             <FeatureCard
-              key={index}
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
               delay={feature.delay}
             />
+          </div>
           ))}
         </div>
       </div>

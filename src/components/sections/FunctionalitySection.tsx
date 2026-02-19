@@ -10,13 +10,13 @@ const FunctionalitySection = () => {
     <section className="py-20 bg-gradient-to-b from-black to-gray-900">
       <div className="container mx-auto px-4">
         <FadeIn direction="up">
-          <div className="max-w-5xl mx-auto space-y-8">
+          <div className="max-w-[1400px] mx-auto space-y-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Princíp fungovania systému IGLA</h2>
               <div className="mt-4 h-1 w-24 bg-orange-500 mx-auto rounded-full"></div>
             </div>
             
-            <p className="text-gray-300 text-lg text-center max-w-3xl mx-auto">
+            <p className="text-gray-300 text-lg text-center max-w-prose mx-auto">
               IGLA je sofistikovaný digitálny imobilizér s unikátnym autorizačným systémom, ktorý chráni vozidlo bez potreby klasického ovládača.
             </p>
             
@@ -74,7 +74,7 @@ const FunctionalitySection = () => {
               </div>
             </div>
             
-            <div className="mt-10 p-6 bg-orange-500/10 border border-orange-500/30 rounded-xl shadow-lg max-w-4xl mx-auto">
+            <div className="mt-10 p-6 bg-orange-500/10 border border-orange-500/30 rounded-xl shadow-lg max-w-[1400px] mx-auto">
               <div className="flex items-start">
                 <AlertTriangle className="h-6 w-6 text-orange-500 mr-3 flex-shrink-0 mt-0.5" />
                 <div>

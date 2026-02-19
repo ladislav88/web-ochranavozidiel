@@ -39,8 +39,7 @@ export default function KontaktPage() {
           imageSrc="/lovable-uploads/ee024d7c-8a60-425c-9be7-01068775ae7c.png"
         />
 
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-5xl mx-auto">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
             <div className="glassmorphism rounded-xl p-8 mb-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
@@ -146,7 +145,7 @@ export default function KontaktPage() {
                 </div>
               </div>
               <div className="mt-10 flex justify-center">
-                <Card className="w-full max-w-3xl mx-auto bg-secondary/30 border border-primary/10">
+                <Card className="w-full max-w-prose mx-auto bg-secondary/30 border border-primary/10">
                   <CardContent className="p-6 text-center">
                     <p className="text-sm text-muted-foreground mb-2">
                       Spoločnosť ALCO.SK, s.r.o. je zapísaná v Obchodnom registri Okresného
@@ -162,7 +161,6 @@ export default function KontaktPage() {
               </div>
             </div>
             <Contact />
-          </div>
         </div>
       </main>
       <Footer />

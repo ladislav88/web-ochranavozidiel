@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Mail, Phone } from 'lucide-react';
+import { Menu, X, Mail, Phone, Facebook } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -40,8 +40,17 @@ export default function NavbarNext() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col">
       <div className="bg-black/95 py-1 border-b border-gray-800/50">
-        <div className="container mx-auto px-4 flex justify-end items-center">
+        <div className="container mx-auto px-4 sm:px-6 xl:px-10 flex justify-end items-center">
           <div className="flex items-center text-gray-300 text-sm space-x-4">
+            <a
+              href="https://www.facebook.com/autoalarmytrencin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:text-[#1877f2] transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
             <a
               href="mailto:info@ochranavozidiel.sk"
               className="flex items-center hover:text-[#e06329] transition-colors"
@@ -68,7 +77,7 @@ export default function NavbarNext() {
             : 'bg-black/90 text-white backdrop-blur-sm py-4'
         )}
       >
-        <div className="container mx-auto px-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 xl:px-10 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <img
               src="/lovable-uploads/64cc852c-8709-41b4-b5e3-74c09fbbefed.png"
@@ -120,7 +129,7 @@ export default function NavbarNext() {
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 sm:px-6 xl:px-10 py-6">
           <nav className="flex flex-col space-y-4 pt-20">
             {navLinks.map((link) => (
               <Link
@@ -140,6 +149,16 @@ export default function NavbarNext() {
               Chcem ponuku
             </Link>
             <div className="mt-8 flex flex-col space-y-3 text-gray-300">
+              <a
+                href="https://www.facebook.com/autoalarmytrencin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center hover:text-[#1877f2]"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-4 w-4 mr-2" />
+                Facebook
+              </a>
               <a href="mailto:info@ochranavozidiel.sk" className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 info@ochranavozidiel.sk

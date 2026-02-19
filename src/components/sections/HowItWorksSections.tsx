@@ -43,7 +43,7 @@ const HowItWorksSections = () => {
       <div className="container mx-auto px-4">
         <FadeIn direction="up" className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 max-w-2xl mx-auto text-balance">Ako vlastne IGLA funguje?</h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-lg text-gray-300 max-w-prose mx-auto text-balance">
             IGLA je revolučný zabezpečovací systém, ktorý využíva digitálnu technológiu na ochranu vozidla bez potreby klasického ovládača.
           </p>
         </FadeIn>

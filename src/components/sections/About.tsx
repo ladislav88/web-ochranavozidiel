@@ -11,19 +11,19 @@ const About = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#e06329]/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#3a86c9]/5 rounded-full blur-3xl -z-10" />
       
-      <div className="container mx-auto px-4 w-full">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 w-full">
         <FadeIn direction="up" className="text-center mb-6">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-balance mb-4 max-w-3xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-balance mb-4 max-w-prose mx-auto">
             Prečo si vybrať systém <span className="text-[#e06329]">IGLA?</span>
           </h2>
           
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-prose mx-auto">
             IGLA je inováciou v ochrane vozidiel. Na rozdiel od klasických alarmov a imobilizérov, 
             IGLA pracuje neviditeľne a bez ovládača.
           </p>
         </FadeIn>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-12 gap-6 mt-8">
           {[
             {
               icon: <Key className="h-10 w-10 text-[#e06329]" />,
@@ -56,13 +56,13 @@ const About = () => {
               description: "Inštalácia certifikovanými technikmi zaručuje maximálnu účinnosť"
             },
           ].map((item, index) => (
-            <FadeIn key={index} direction="up" delay={`${index * 0.1}s`} className="h-full">
+            <FadeIn key={index} direction="up" delay={`${index * 0.1}s`} className="h-full col-span-12 md:col-span-6 lg:col-span-4">
               <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 h-full hover:bg-zinc-800/50 transition-colors duration-300 hover:border-zinc-700 flex flex-col items-center text-center">
                 <div className="flex items-center justify-center w-16 h-16 mb-4 mx-auto rounded-full bg-gradient-to-br from-[#3a86c9]/20 to-[#e06329]/20">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-center text-balance">{item.title}</h3>
-                <p className="text-gray-400 text-center">{item.description}</p>
+                <p className="text-gray-400 text-center max-w-[70ch] mx-auto">{item.description}</p>
               </div>
             </FadeIn>
           ))}

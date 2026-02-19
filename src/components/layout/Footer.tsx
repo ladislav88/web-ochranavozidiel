@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-black text-white overflow-hidden">
-      <div className="max-w-[1140px] mx-auto py-8 px-4">
+      <div className="max-w-[1400px] mx-auto py-8 px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex-shrink-0">
             <Link href="/">

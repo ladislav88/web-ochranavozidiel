@@ -12,14 +12,20 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1rem',
+				sm: '1.5rem',
+				lg: '2rem',
+				xl: '2.5rem',
+				'2xl': '2.5rem',
+			},
 			screens: {
-				'2xl': '1140px',
-				xl: '1140px',
-				lg: '1140px',
+				'2xl': '1400px',
+				xl: '1400px',
+				lg: '1400px',
 				md: '100%',
 				sm: '100%',
-			}
+			},
 		},
 		extend: {
 			fontFamily: {

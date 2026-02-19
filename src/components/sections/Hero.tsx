@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 max-w-screen-xl relative z-20 w-full pt-16">
-        <div className="max-w-4xl mx-auto text-center stagger-animate">
+        <div className="max-w-[1400px] mx-auto text-center stagger-animate">
           <FadeIn direction="up" className="mb-6">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#3a86c9] drop-shadow-lg">
               IGLA Bezpečnostný Systém
@@ -26,13 +26,13 @@ const Hero = () => {
           </FadeIn>
           
           <FadeIn direction="up" delay="0.1s" className="mb-8">
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-prose mx-auto leading-relaxed">
               Najmodernejši system, ktory chrani vozidlo sofistikovaným algoritnom vo viacerých bodoch naraz.
             </p>
           </FadeIn>
           
           <FadeIn direction="up" delay="0.2s" className="mb-8">
-            <Alert className="border border-accent/20 bg-black/60 backdrop-blur-sm max-w-3xl mx-auto">
+            <Alert className="border border-accent/20 bg-black/60 backdrop-blur-sm max-w-prose mx-auto">
               <div className="flex items-start">
                 <Shield className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                 <Car className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />

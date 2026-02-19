@@ -22,7 +22,7 @@ export default function CertifikatyPage() {
         <section className="section-container py-16 md:py-20">
           <h1 className="section-title mb-12">Profil, Certifikáty</h1>
 
-          <div className="mx-auto max-w-3xl space-y-8">
+          <div className="mx-auto max-w-prose space-y-8">
             <p className="text-lg leading-relaxed text-muted-foreground">
               Spoločnosť ALCO.SK, s.r.o. vznikla transformáciou živnostenskej
               činnosti na právnu formu: spoločnosť s ručením obmedzeným. Prvotná

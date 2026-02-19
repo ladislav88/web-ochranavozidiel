@@ -199,11 +199,11 @@ export default function ParkovacieSenzoryPage() {
       <main className="pt-20">
         {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-zinc-900 to-black py-20 md:py-28">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+          <div className="container mx-auto px-4 sm:px-6 xl:px-10 text-center">
+            <h1 className="mx-auto max-w-prose text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
               Parkovacie snímače (senzory) – profesionálna montáž v Trenčíne
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
+            <p className="mx-auto mt-6 max-w-prose text-lg text-zinc-300 md:text-xl">
               Bezpečné parkovanie bez stresu. Ochrana nárazníka, presné meranie
               vzdialenosti.
             </p>
@@ -242,7 +242,7 @@ export default function ParkovacieSenzoryPage() {
                   <b.icon className="h-6 w-6 text-[#e06329]" />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold">{b.title}</h3>
-                <p className="text-muted-foreground">{b.desc}</p>
+                <p className="text-muted-foreground max-w-[70ch]">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -254,7 +254,7 @@ export default function ParkovacieSenzoryPage() {
           <p className="section-subtitle text-center">
             Jednoduchý proces od konzultácie po odovzdanie vozidla.
           </p>
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-prose">
             <div className="space-y-8">
               {STEPS.map((step, i) => (
                 <div key={i} className="flex gap-6">
@@ -299,7 +299,7 @@ export default function ParkovacieSenzoryPage() {
                     <f.icon className="h-5 w-5 text-[#e06329]" />
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">{f.title}</h3>
-                  <p className="text-sm text-muted-foreground">{f.desc}</p>
+                  <p className="text-sm text-muted-foreground max-w-[70ch]">{f.desc}</p>
                 </div>
               </div>
             ))}
@@ -312,7 +312,7 @@ export default function ParkovacieSenzoryPage() {
           <p className="section-subtitle text-center">
             Presvedčte sa o kvalite našej práce.
           </p>
-          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-[1400px] gap-8 md:grid-cols-2">
             <AutoPlayYouTube
               videoId="https://youtu.be/jsLz8NERL3Q"
               title="Montáž parkovacích senzorov - video 1"
@@ -330,7 +330,7 @@ export default function ParkovacieSenzoryPage() {
           <p className="section-subtitle text-center">
             Všetko, čo potrebujete vedieť o parkovacích senzoroch.
           </p>
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-prose">
             <ParkovacieSenzoryFAQ />
           </div>
         </section>
@@ -341,7 +341,7 @@ export default function ParkovacieSenzoryPage() {
           <p className="section-subtitle text-center">
             Cena podľa typu vozidla a zvoleného riešenia.
           </p>
-          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+          <div className="mx-auto grid max-w-[1400px] gap-6 md:grid-cols-2 lg:grid-cols-3">
             {PRICING_PACKAGES.map((pkg, i) => (
               <div
                 key={i}
@@ -370,7 +370,7 @@ export default function ParkovacieSenzoryPage() {
           <p className="section-subtitle text-center">
             Trenčín a okolie. Zavolajte alebo napíšte.
           </p>
-          <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
+          <div className="mx-auto grid max-w-[1400px] gap-12 md:grid-cols-2">
             <div className="space-y-6">
               <a
                 href="tel:+421911911876"

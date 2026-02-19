@@ -36,7 +36,7 @@ export default function PasivnyMonitoringPage() {
           imageSrc="/lovable-uploads/ee024d7c-8a60-425c-9be7-01068775ae7c.png"
         />
         <section className="section-container">
-          <div className="max-w-3xl mx-auto text-muted-foreground space-y-4">
+          <div className="max-w-prose mx-auto text-muted-foreground space-y-4">
             <p>
               Pasívny monitoring umožňuje sledovať polohu vozidla a prijímať upozornenia. Ideálny doplnok k sofistikovanému zabezpečeniu.
             </p>

@@ -91,7 +91,7 @@ const Reviews = () => {
   return (
     <section id="reviews" className="py-20 md:py-24 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 stagger-animate">
+        <div className="text-center max-w-prose mx-auto mb-16 stagger-animate">
           <div className="mb-4">
             <span className="inline-block px-3 py-1 text-xs font-medium bg-orange-500/20 text-orange-500 rounded-full">
               Recenzie

@@ -30,7 +30,7 @@ const PageHeader = ({ title, subtitle, imageSrc }: PageHeaderProps) => {
         
         {subtitle && (
           <FadeIn direction="up" delay="0.1s">
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-300 max-w-prose mx-auto">
               {subtitle}
             </p>
           </FadeIn>

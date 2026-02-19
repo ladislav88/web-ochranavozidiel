@@ -45,7 +45,7 @@ const InstallationProcess = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-balance max-w-2xl mx-auto bg-gradient-to-r from-[#3a86c9] to-[#e06329] bg-clip-text text-transparent">
             Inštalácia systému IGLA
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-prose mx-auto">
             Proces inštalácie je jednoduchý, rýchly a nevyžaduje žiadne viditeľné zmeny na vašom vozidle.
           </p>
         </FadeIn>
@@ -71,7 +71,7 @@ const InstallationProcess = () => {
         </div>
         
         <FadeIn direction="up" className="text-center mt-8">
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-prose mx-auto">
             Po inštalácii vám podrobne vysvetlíme, ako systém funguje, a ukážeme vám, ako ho používať.
             Dostanete tiež písomný návod na použitie a kontakt na našu technickú podporu.
           </p>
