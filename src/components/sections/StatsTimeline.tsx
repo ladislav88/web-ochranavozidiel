@@ -1,12 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import FadeIn from '../animations/FadeIn';
 
 const STATS = [
-  { value: 0, label: 'Ukradnutých vozidiel', suffix: '' },
-  { value: 26, label: 'Nahlásených pokusov o krádež', suffix: '' },
-  { value: '4 860', label: 'Montáží od roku 1999', suffix: '+' },
+  { target: 0, label: 'Ukradnutých vozidiel', suffix: '', format: (n: number) => n.toString() },
+  { target: 26, label: 'Nahlásených pokusov o krádež', suffix: '', format: (n: number) => n.toString() },
+  {
+    target: 4860,
+    label: 'Montáží od roku 1999',
+    suffix: '+',
+    format: (n: number) => Math.round(n).toLocaleString('sk-SK').replace(/\s/g, ' '),
+  },
 ];
 
 const MILESTONES = [
@@ -19,21 +24,45 @@ const MILESTONES = [
   { year: '2025', desc: 'Približne 4860 montáží' },
 ];
 
+const DURATION = 1800;
+const EASING = (t: number) => 1 - Math.pow(1 - t, 3);
+
 export default function StatsTimeline() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [isVisible, setIsVisible] = useState(false);
+  const [displayValues, setDisplayValues] = useState<number[]>([0, 0, 0]);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
+        if (entry.isIntersecting && !hasAnimated.current) {
+          setIsVisible(true);
+          hasAnimated.current = true;
+        }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
     );
     const el = document.getElementById('stats-timeline');
     if (el) observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    const start = performance.now();
+    const targets = STATS.map((s) => s.target);
+
+    const tick = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / DURATION, 1);
+      const eased = EASING(progress);
+      setDisplayValues(targets.map((t) => t * eased));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  }, [isVisible]);
 
   return (
     <section id="stats-timeline" className="py-16 md:py-24 relative overflow-hidden bg-zinc-950/50">
@@ -57,7 +86,7 @@ export default function StatsTimeline() {
                 className="text-center p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 hover:border-[#e06329]/40 transition-all duration-300 hover:bg-zinc-900/70"
               >
                 <div className="text-4xl md:text-5xl font-bold text-[#e06329] mb-2 tabular-nums">
-                  {stat.value}
+                  {stat.format(displayValues[i])}
                   {stat.suffix}
                 </div>
                 <div className="text-muted-foreground text-sm md:text-base">{stat.label}</div>

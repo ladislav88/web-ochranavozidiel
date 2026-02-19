@@ -12,10 +12,10 @@ const Hero = () => {
         <img
           src={HERO_BACKGROUND_IMAGE}
           alt={HERO_BACKGROUND_ALT}
-          className="w-full h-full object-cover object-center opacity-30"
+          className="w-full h-full object-cover object-center opacity-70"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black"></div>
       </div>
       
       <div className="container mx-auto px-4 max-w-screen-xl relative z-20 w-full pt-16">

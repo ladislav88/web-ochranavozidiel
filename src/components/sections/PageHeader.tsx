@@ -16,10 +16,10 @@ const PageHeader = ({ title, subtitle, imageSrc = HERO_BACKGROUND_IMAGE }: PageH
         <img
           src={imageSrc}
           alt={`${title} - ${HERO_BACKGROUND_ALT}`}
-          className="w-full h-full object-cover object-center opacity-30"
+          className="w-full h-full object-cover object-center opacity-70"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-center">
