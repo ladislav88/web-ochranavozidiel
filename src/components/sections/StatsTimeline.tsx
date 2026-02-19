@@ -4,13 +4,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import FadeIn from '../animations/FadeIn';
 
 const STATS = [
-  { target: 0, label: 'Ukradnutých vozidiel', suffix: '', format: (n: number) => n.toString() },
-  { target: 26, label: 'Nahlásených pokusov o krádež', suffix: '', format: (n: number) => n.toString() },
+  { target: 0, label: 'Ukradnutých vozidiel', suffix: '', format: (n: number) => String(Math.floor(n)) },
+  { target: 26, label: 'Nahlásených pokusov o krádež', suffix: '', format: (n: number) => String(Math.floor(n)) },
   {
     target: 4860,
     label: 'Montáží od roku 1999',
     suffix: '+',
-    format: (n: number) => Math.round(n).toLocaleString('sk-SK').replace(/\s/g, ' '),
+    format: (n: number) => Math.floor(n).toLocaleString('sk-SK'),
   },
 ];
 
@@ -24,8 +24,8 @@ const MILESTONES = [
   { year: '2025', desc: 'Približne 4860 montáží' },
 ];
 
-const DURATION = 1800;
-const EASING = (t: number) => 1 - Math.pow(1 - t, 3);
+const DURATION = 2200;
+const EASING = (t: number) => 1 - Math.pow(1 - t, 4);
 
 export default function StatsTimeline() {
   const [activeIndex, setActiveIndex] = useState(-1);
