@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import nextDynamic from 'next/dynamic';
 import '@/index.css';
 
-const AnimatedBackground = dynamic(
+const AnimatedBackground = nextDynamic(
   () => import('@/components/animations/AnimatedBackground'),
   { ssr: false }
 );
