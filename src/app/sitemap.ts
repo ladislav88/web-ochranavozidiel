@@ -2,19 +2,23 @@ import { MetadataRoute } from 'next';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
-    '',
-    '/sofistikovane-zabezpecenie',
-    '/pasivny-monitoring',
-    '/parkovacie-senzory',
-    '/kontakt',
-  ];
+const ROUTES: Array<{
+  path: string;
+  changeFrequency: 'weekly' | 'monthly';
+  priority: number;
+}> = [
+  { path: '', changeFrequency: 'weekly', priority: 1.0 },
+  { path: '/sofistikovane-zabezpecenie', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/pasivny-monitoring', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/parkovacie-senzory', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/kontakt', changeFrequency: 'monthly', priority: 0.5 },
+];
 
-  return routes.map((route) => ({
-    url: `${SITE_URL}${route}`,
+export default function sitemap(): MetadataRoute.Sitemap {
+  return ROUTES.map(({ path, changeFrequency, priority }) => ({
+    url: `${SITE_URL}${path}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : ('monthly' as const),
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency,
+    priority,
   }));
 }
