@@ -2,11 +2,14 @@ import React from 'react';
 import FadeIn from '../animations/FadeIn';
 import { Shield, Car } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT } from '@/constants/hero';
+import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT, HERO_HEIGHT_PX } from '@/constants/hero';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[600px] overflow-hidden bg-black flex items-center justify-center w-full py-16">
+    <section
+      className="fixed top-0 left-0 right-0 z-30 overflow-hidden bg-black flex items-center justify-center w-full"
+      style={{ height: HERO_HEIGHT_PX }}
+    >
       {/* Hero Background Image - WebP pre výkon */}
       <div className="absolute inset-0 w-full h-full">
         <img

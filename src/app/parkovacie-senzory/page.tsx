@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT } from '@/constants/hero';
+import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT, HERO_HEIGHT_PX } from '@/constants/hero';
 import NavbarNext from '@/components/layout/NavbarNext';
 import Footer from '@/components/layout/Footer';
 import AutoPlayYouTube from '@/components/AutoPlayYouTube';
@@ -197,9 +197,12 @@ export default function ParkovacieSenzoryPage() {
         <Phone className="h-6 w-6" />
       </a>
 
-      <main className="pt-20">
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-black py-20 md:py-28">
+      <main className="relative">
+        {/* HERO - fixná výška, neposúva sa pri scrollovaní */}
+        <section
+          className="fixed top-0 left-0 right-0 z-30 overflow-hidden bg-black flex items-center justify-center"
+          style={{ height: HERO_HEIGHT_PX }}
+        >
           <div className="absolute inset-0 w-full h-full">
             <img
               src={HERO_BACKGROUND_IMAGE}
@@ -236,6 +239,8 @@ export default function ParkovacieSenzoryPage() {
           </div>
         </section>
 
+        {/* Spacer + obsah */}
+        <div className="relative z-40" style={{ paddingTop: HERO_HEIGHT_PX }}>
         {/* BENEFITY */}
         <section className="section-container bg-zinc-900/30 py-16 md:py-20">
           <h2 className="section-title text-center">Prečo si vybrať nás</h2>
@@ -418,6 +423,7 @@ export default function ParkovacieSenzoryPage() {
             </div>
           </div>
         </section>
+        </div>
       </main>
       <Footer />
     </>

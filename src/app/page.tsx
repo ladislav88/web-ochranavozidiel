@@ -9,6 +9,7 @@ import TechnicalSpecifications from '@/components/sections/TechnicalSpecificatio
 import StatsTimeline from '@/components/sections/StatsTimeline';
 import Hero from '@/components/sections/Hero';
 import HomePageClient from './HomePageClient';
+import { HERO_HEIGHT_PX } from '@/constants/hero';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 
@@ -37,7 +38,10 @@ export default function HomePage() {
       <NavbarNext />
       <main className="w-full overflow-x-hidden">
         <Hero />
-        <div className="space-y-0 divide-y divide-zinc-900/30 w-full">
+        <div
+          className="space-y-0 divide-y divide-zinc-900/30 w-full relative z-40"
+          style={{ paddingTop: HERO_HEIGHT_PX }}
+        >
           <About />
           <StatsTimeline />
           <HowItWorksSections />

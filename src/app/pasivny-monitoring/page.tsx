@@ -3,6 +3,7 @@ import NavbarNext from '@/components/layout/NavbarNext';
 import Footer from '@/components/layout/Footer';
 import PageHeader from '@/components/sections/PageHeader';
 import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
+import { HERO_HEIGHT_PX } from '@/constants/hero';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/pasivny-monitoring/';
@@ -29,12 +30,13 @@ export default function PasivnyMonitoringPage() {
   return (
     <>
       <NavbarNext />
-      <main className="pt-20 divide-y divide-zinc-900/30">
+      <main className="relative">
         <PageHeader
           title="Pasívny monitoring"
           subtitle="GPS a GSM lokalizácia vozidiel"
         />
-        <section className="section-container">
+        <div className="relative z-40 divide-y divide-zinc-900/30" style={{ paddingTop: HERO_HEIGHT_PX }}>
+          <section className="section-container">
           <div className="max-w-prose mx-auto text-muted-foreground space-y-4">
             <p>
               Pasívny monitoring umožňuje sledovať polohu vozidla a prijímať upozornenia. Ideálny doplnok k sofistikovanému zabezpečeniu.
@@ -44,7 +46,8 @@ export default function PasivnyMonitoringPage() {
             </p>
           </div>
         </section>
-        <TechnicalSpecifications />
+          <TechnicalSpecifications />
+        </div>
       </main>
       <Footer />
     </>

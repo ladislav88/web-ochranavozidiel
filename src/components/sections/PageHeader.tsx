@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeIn from '@/components/animations/FadeIn';
-import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT } from '@/constants/hero';
+import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT, HERO_HEIGHT_PX } from '@/constants/hero';
 
 interface PageHeaderProps {
   title: string;
@@ -10,7 +10,10 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, subtitle, imageSrc = HERO_BACKGROUND_IMAGE }: PageHeaderProps) => {
   return (
-    <section className="relative h-[500px] flex items-center justify-center overflow-hidden w-full">
+    <section
+      className="fixed top-0 left-0 right-0 z-30 flex items-center justify-center overflow-hidden w-full bg-black"
+      style={{ height: HERO_HEIGHT_PX }}
+    >
       {/* Header background image - WebP pre výkon */}
       <div className="absolute inset-0 w-full h-full">
         <img
