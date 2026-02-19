@@ -3,7 +3,7 @@ import React from 'react';
 import { Check, AlertTriangle } from 'lucide-react';
 import FadeIn from '../animations/FadeIn';
 import CustomButton from '../ui/CustomButton';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const FunctionalitySection = () => {
   return (
@@ -87,7 +87,7 @@ const FunctionalitySection = () => {
             </div>
             
             <div className="flex justify-center mt-10">
-              <Link to="/contact-request">
+              <Link href="/kontakt">
                 <CustomButton 
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 text-lg rounded-lg shadow-lg shadow-orange-500/20"
                 >

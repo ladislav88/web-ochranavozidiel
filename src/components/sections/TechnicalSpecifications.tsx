@@ -51,7 +51,7 @@ const TechnicalSpecifications = () => {
               <div className="pt-4">
                 <CustomButton 
                   className="bg-orange-500 hover:bg-orange-600 text-white"
-                  href="/contact-request"
+                  href="/kontakt"
                 >
                   Chcem zabezpečiť svoje vozidlo
                   <ArrowRight className="ml-2 h-4 w-4" />

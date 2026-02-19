@@ -1,3 +1,4 @@
+'use client';
 
 import React, { useEffect, useRef } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';

@@ -1,7 +1,8 @@
+'use client';
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
@@ -56,7 +57,7 @@ const CustomButton = ({
 
   if (href) {
     return (
-      <Link to={href} className={buttonClasses}>
+      <Link href={href} className={buttonClasses}>
         {children}
       </Link>
     );

@@ -49,7 +49,7 @@ const PricePlan = ({ title, price, description, features, buttonText, icon, high
         size="lg" 
         isFullWidth={true}
         className="mt-auto"
-        href="/contact-request"
+        href="/kontakt"
       >
         {buttonText}
         <ArrowRight className="ml-2 h-4 w-4" />

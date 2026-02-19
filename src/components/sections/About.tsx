@@ -3,7 +3,6 @@ import React from 'react';
 import FadeIn from '../animations/FadeIn';
 import CustomButton from '../ui/CustomButton';
 import { ArrowRight, Shield, Car, Key, Lock, Cpu, Wrench } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -72,7 +71,7 @@ const About = () => {
         <FadeIn direction="up" className="mt-8 text-center">
           <CustomButton 
             className="bg-[#e06329] hover:bg-[#c85823] text-white mx-auto"
-            href="/how-it-works"
+            href="/sofistikovane-zabezpecenie"
           >
             Zistite viac o systéme IGLA
             <ArrowRight className="ml-2 h-4 w-4" />

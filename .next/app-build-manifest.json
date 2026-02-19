@@ -1,0 +1,86 @@
+{
+  "pages": {
+    "/not-found": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/972-fe6312bfe0380931.js",
+      "static/chunks/app/not-found-cda592aacfee7059.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/app/_not-found/page-c1bbe1b4bc8170a6.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/css/aa40ea8623f2512d.css",
+      "static/chunks/837-38d4cdacce7ce00a.js",
+      "static/chunks/110-1421c1310a470eac.js",
+      "static/chunks/932-9cac765e14c08500.js",
+      "static/chunks/app/layout-769e6e4484f860c0.js"
+    ],
+    "/parkovacie-senzory/page": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/972-fe6312bfe0380931.js",
+      "static/chunks/837-38d4cdacce7ce00a.js",
+      "static/chunks/40-14c48f67d9517584.js",
+      "static/chunks/app/parkovacie-senzory/page-29da29678a6a2e6a.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/972-fe6312bfe0380931.js",
+      "static/chunks/837-38d4cdacce7ce00a.js",
+      "static/chunks/40-14c48f67d9517584.js",
+      "static/chunks/110-1421c1310a470eac.js",
+      "static/chunks/269-0505ca1936cbc88b.js",
+      "static/chunks/130-6956a69295b4b671.js",
+      "static/chunks/app/page-2f86b40470eea288.js"
+    ],
+    "/pasivny-monitoring/page": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/972-fe6312bfe0380931.js",
+      "static/chunks/837-38d4cdacce7ce00a.js",
+      "static/chunks/40-14c48f67d9517584.js",
+      "static/chunks/app/pasivny-monitoring/page-450d4dce13222db3.js"
+    ],
+    "/sofistikovane-zabezpecenie/page": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/972-fe6312bfe0380931.js",
+      "static/chunks/837-38d4cdacce7ce00a.js",
+      "static/chunks/40-14c48f67d9517584.js",
+      "static/chunks/app/sofistikovane-zabezpecenie/page-109ca10e71b04c61.js"
+    ],
+    "/kontakt/page": [
+      "static/chunks/webpack-c848ba2d5aca6143.js",
+      "static/chunks/fd9d1056-b88f8a4cc02eef8b.js",
+      "static/chunks/117-1cf6cf33ca93b4e0.js",
+      "static/chunks/main-app-56866aed2f0fb38a.js",
+      "static/chunks/972-fe6312bfe0380931.js",
+      "static/chunks/837-38d4cdacce7ce00a.js",
+      "static/chunks/40-14c48f67d9517584.js",
+      "static/chunks/110-1421c1310a470eac.js",
+      "static/chunks/269-0505ca1936cbc88b.js",
+      "static/chunks/130-6956a69295b4b671.js",
+      "static/chunks/app/kontakt/page-8e8bf118bf64a497.js"
+    ]
+  }
+}
