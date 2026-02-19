@@ -49,7 +49,8 @@ export default function NavbarNext() {
               className="flex items-center hover:text-[#1877f2] transition-colors"
               aria-label="Facebook"
             >
-              <Facebook className="h-4 w-4" />
+              <Facebook className="h-3.5 w-3.5 mr-1.5" />
+              <span>Facebook</span>
             </a>
             <a
               href="mailto:info@ochranavozidiel.sk"
