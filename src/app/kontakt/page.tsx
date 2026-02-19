@@ -78,10 +78,10 @@ export default function KontaktPage() {
                         <h3 className="font-semibold mb-1">Email</h3>
                         <p>
                           <a
-                            href="mailto:info@autoalarmy-trencin.sk"
+                            href="mailto:info@ochranavozidiel.sk"
                             className="hover:text-primary"
                           >
-                            info@autoalarmy-trencin.sk
+                            info@ochranavozidiel.sk
                           </a>
                         </p>
                       </div>

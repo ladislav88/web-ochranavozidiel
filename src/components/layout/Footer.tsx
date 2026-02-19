@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2 text-xs mt-1">
               <a 
-                href="mailto:info@autoalarmy-trencin.sk" 
+                href="mailto:info@ochranavozidiel.sk" 
                 className="flex items-center gap-1 hover:text-[#3a86c9]"
               >
                 <Mail size={14} />

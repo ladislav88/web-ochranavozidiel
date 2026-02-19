@@ -43,11 +43,11 @@ export default function NotFound() {
                 +421 911 911 876
               </a>
               <a
-                href="mailto:info@autoalarmy-trencin.sk"
+                href="mailto:info@ochranavozidiel.sk"
                 className="flex items-center gap-2 text-[#e06329] hover:text-[#c85823] font-medium"
               >
                 <Mail className="h-4 w-4" />
-                info@autoalarmy-trencin.sk
+                info@ochranavozidiel.sk
               </a>
             </div>
           </div>

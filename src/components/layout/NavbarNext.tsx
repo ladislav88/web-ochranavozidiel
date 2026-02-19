@@ -42,11 +42,11 @@ export default function NavbarNext() {
         <div className="container mx-auto px-4 flex justify-end items-center">
           <div className="flex items-center text-gray-300 text-sm space-x-4">
             <a
-              href="mailto:info@autoalarmy-trencin.sk"
+              href="mailto:info@ochranavozidiel.sk"
               className="flex items-center hover:text-[#e06329] transition-colors"
             >
               <Mail className="h-3.5 w-3.5 mr-1.5" />
-              <span>info@autoalarmy-trencin.sk</span>
+              <span>info@ochranavozidiel.sk</span>
             </a>
             <a
               href="tel:+421911911876"
@@ -139,9 +139,9 @@ export default function NavbarNext() {
               Chcem ponuku
             </Link>
             <div className="mt-8 flex flex-col space-y-3 text-gray-300">
-              <a href="mailto:info@autoalarmy-trencin.sk" className="flex items-center">
+              <a href="mailto:info@ochranavozidiel.sk" className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                info@autoalarmy-trencin.sk
+                info@ochranavozidiel.sk
               </a>
               <a href="tel:+421911911876" className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
