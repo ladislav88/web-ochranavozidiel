@@ -1,10 +1,10 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/parkovacie-senzory/page": "app/parkovacie-senzory/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
   "/page": "app/page.js",
+  "/kontakt/page": "app/kontakt/page.js",
   "/pasivny-monitoring/page": "app/pasivny-monitoring/page.js",
-  "/sofistikovane-zabezpecenie/page": "app/sofistikovane-zabezpecenie/page.js",
-  "/kontakt/page": "app/kontakt/page.js"
+  "/parkovacie-senzory/page": "app/parkovacie-senzory/page.js",
+  "/sofistikovane-zabezpecenie/page": "app/sofistikovane-zabezpecenie/page.js"
 }

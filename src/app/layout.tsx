@@ -7,9 +7,11 @@ const AnimatedBackground = nextDynamic(
   { ssr: false }
 );
 
-export const dynamic = 'force-dynamic';
-import { Toaster } from '@/components/ui/toaster';
-import { Toaster as Sonner } from '@/components/ui/sonner';
+const Sonner = nextDynamic(
+  () => import('@/components/ui/sonner').then((m) => ({ default: m.Toaster })),
+  { ssr: false }
+);
+
 import { TooltipProvider } from '@/components/ui/tooltip';
 import Providers from './providers';
 
@@ -54,11 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sk">
-      <body className="min-h-screen antialiased">
+    <html lang="sk" suppressHydrationWarning>
+      <body className="min-h-screen antialiased" suppressHydrationWarning>
         <Providers>
           <TooltipProvider>
-            <Toaster />
             <Sonner />
             <AnimatedBackground />
             {children}
