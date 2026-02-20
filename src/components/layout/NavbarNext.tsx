@@ -106,10 +106,10 @@ export default function NavbarNext() {
               </NavigationMenuList>
             </NavigationMenu>
             <Link
-              href="/kontakt"
+              href="/kontakt#contact"
               className="bg-[#e06329] hover:bg-[#c85823] text-white font-medium px-4 py-2 rounded-md transition-colors"
             >
-              Chcem ponuku
+              Chcem zistiť cenu
             </Link>
           </div>
 
@@ -143,11 +143,11 @@ export default function NavbarNext() {
               </Link>
             ))}
             <Link
-              href="/kontakt"
+              href="/kontakt#contact"
               className="w-full bg-[#e06329] hover:bg-[#c85823] text-white font-medium py-3 flex items-center justify-center rounded-md mt-6"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Chcem ponuku
+              Chcem zistiť cenu
             </Link>
             <div className="mt-8 flex flex-col space-y-3 text-gray-300">
               <a

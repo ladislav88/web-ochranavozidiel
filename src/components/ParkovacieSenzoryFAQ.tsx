@@ -37,10 +37,6 @@ const FAQ_ITEMS = [
     q: 'Môžem doplniť parkovacie senzory o zadnú kameru?',
     a: 'Áno. Ponúkame kombinácie senzory + kamera, čo zvýši komfort a bezpečnosť pri manévrovaní. Cenová ponuka je vždy individuálna podľa typu vozidla.',
   },
-  {
-    q: 'Aká je záruka na montáž?',
-    a: 'Na našu prácu poskytujeme záruku. Konkrétne záručné podmienky a obdobia závisia od použitých komponentov – preberieme ich pri osobnej konzultácii.',
-  },
 ];
 
 export default function ParkovacieSenzoryFAQ() {

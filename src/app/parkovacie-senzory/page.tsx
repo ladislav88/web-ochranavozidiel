@@ -80,8 +80,8 @@ const BENEFITS = [
   },
   {
     icon: ShieldCheck,
-    title: 'Záruka + profesionálne zapojenie',
-    desc: 'Kvalitná práca so zárukou a čistým zapojením.',
+    title: 'Profesionálne zapojenie',
+    desc: 'Kvalitná práca s čistým zapojením.',
   },
 ];
 

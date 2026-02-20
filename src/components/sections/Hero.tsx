@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import FadeIn from '../animations/FadeIn';
 import { Shield, Car } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -45,6 +46,14 @@ const Hero = () => {
                 </AlertDescription>
               </div>
             </Alert>
+          </FadeIn>
+          <FadeIn direction="up" delay="0.3s">
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#e06329] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#c85823] shadow-lg hover:shadow-[#e06329]/30"
+            >
+              Chcem zistiť cenu
+            </Link>
           </FadeIn>
         </div>
       </div>

@@ -114,8 +114,7 @@ const Pricing = () => {
                 "Integrácia s alarmovým systémom",
                 "Anti-hijack funkcia",
                 "Ochrana proti odťahu",
-                "Najvyššia úroveň zabezpečenia",
-                "3-ročná záruka"
+                "Najvyššia úroveň zabezpečenia"
               ]}
               buttonText="Objednať Alarm"
               icon={<Check className="h-6 w-6" />}

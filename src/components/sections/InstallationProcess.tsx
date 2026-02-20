@@ -28,8 +28,8 @@ const InstallationProcess = () => {
     },
     {
       icon: <Award className="h-8 w-8 text-[#e06329]" />,
-      title: "Zachovanie záruky",
-      description: "Inštalácia nemá vplyv na záruku vozidla poskytovanú výrobcom."
+      title: "Šetrná montáž",
+      description: "Minimálny zásah do vozidla – žiadne vŕtanie ani rezanie pôvodnej kabeláže."
     },
     {
       icon: <Settings className="h-8 w-8 text-[#e06329]" />,

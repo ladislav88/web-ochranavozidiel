@@ -178,8 +178,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-gradient-to-b from-secondary/30 to-black/80">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <section id="contact" className="py-20 md:py-28 bg-gradient-to-b from-zinc-600/20 to-zinc-800/30">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="text-center max-w-prose mx-auto mb-16 stagger-animate">
           <div className="mb-4">
             <span className="inline-block px-3 py-1 text-xs font-medium bg-[#3a86c9]/10 text-[#3a86c9] rounded-full">
@@ -193,7 +193,7 @@ const Contact = () => {
         </div>
         
         <FadeIn direction="up" delay="0.4s">
-          <Card className="max-w-[1400px] mx-auto glassmorphism border-t border-blue-500/20 bg-gradient-to-b from-zinc-900/90 to-black/90 shadow-[0_0_25px_rgba(58,134,201,0.15)] rounded-2xl overflow-hidden">
+          <Card className="max-w-[1680px] mx-auto glassmorphism border-t border-blue-500/20 bg-gradient-to-b from-zinc-500/95 to-zinc-600/95 shadow-[0_0_25px_rgba(58,134,201,0.15)] rounded-2xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-orange-500/5 pointer-events-none"></div>
             <CardContent className="p-8 md:p-10">
               <form className="space-y-6" onSubmit={handleSubmit}>
