@@ -46,7 +46,7 @@ export default function NavbarNext() {
               href="https://www.facebook.com/autoalarmytrencin"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:text-[#1877f2] transition-colors"
+              className="flex items-center text-[#1877f2] hover:text-[#1877f2]/90 transition-colors"
               aria-label="Facebook"
             >
               <Facebook className="h-3.5 w-3.5 mr-1.5" />
@@ -61,7 +61,7 @@ export default function NavbarNext() {
             </a>
             <a
               href="tel:+421911911876"
-              className="flex items-center text-red-500 hover:text-red-400 transition-colors"
+              className="flex items-center text-green-500 hover:text-green-400 transition-colors"
             >
               <Phone className="h-3.5 w-3.5 mr-1.5" />
               <span>+421 911 911 876</span>
@@ -154,7 +154,7 @@ export default function NavbarNext() {
                 href="https://www.facebook.com/autoalarmytrencin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center hover:text-[#1877f2]"
+                className="flex items-center text-[#1877f2] hover:text-[#1877f2]/90"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4 mr-2" />
@@ -164,7 +164,7 @@ export default function NavbarNext() {
                 <Mail className="h-4 w-4 mr-2" />
                 info@ochranavozidiel.sk
               </a>
-              <a href="tel:+421911911876" className="flex items-center">
+              <a href="tel:+421911911876" className="flex items-center text-green-500 hover:text-green-400">
                 <Phone className="h-4 w-4 mr-2" />
                 +421 911 911 876
               </a>
