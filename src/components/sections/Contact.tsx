@@ -307,7 +307,7 @@ const Contact = () => {
                           value={formData.vehicleBrand} 
                           onValueChange={(value) => handleSelectChange('vehicleBrand', value)}
                         >
-                          <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                          <SelectTrigger id="vehicleBrand" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                             <SelectValue placeholder="Vyberte značku" />
                           </SelectTrigger>
                           <SelectContent className="max-h-[300px]">
@@ -328,7 +328,7 @@ const Contact = () => {
                             value={formData.vehicleModel} 
                             onValueChange={(value) => handleSelectChange('vehicleModel', value)}
                           >
-                            <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                            <SelectTrigger id="vehicleModel" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                               <SelectValue placeholder="Vyberte model" />
                             </SelectTrigger>
                             <SelectContent className="max-h-[300px]">
@@ -379,7 +379,7 @@ const Contact = () => {
                             value={formData.vehicleMonth} 
                             onValueChange={(value) => handleSelectChange('vehicleMonth', value)}
                           >
-                            <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                            <SelectTrigger id="vehicleMonth" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                               <SelectValue placeholder="Mesiac" />
                             </SelectTrigger>
                             <SelectContent className="max-h-[300px]">
@@ -399,7 +399,7 @@ const Contact = () => {
                           value={formData.startMethod} 
                           onValueChange={(value) => handleSelectChange('startMethod', value)}
                         >
-                          <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                          <SelectTrigger id="startMethod" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                             <SelectValue placeholder="Vyberte spôsob štartovania" />
                           </SelectTrigger>
                           <SelectContent>
@@ -420,7 +420,7 @@ const Contact = () => {
                           value={formData.engineType} 
                           onValueChange={(value) => handleSelectChange('engineType', value)}
                         >
-                          <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                          <SelectTrigger id="engineType" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                             <SelectValue placeholder="Vyberte motorizáciu" />
                           </SelectTrigger>
                           <SelectContent className="max-h-[300px]">
