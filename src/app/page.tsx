@@ -13,9 +13,9 @@ import HomePageClient from './HomePageClient';
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 
 export const metadata: Metadata = {
-  title: 'Zabezpečenie vozidiel proti krádeži | IGLA | Autoalarmy Trenčín',
+  title: 'Autoalarmy Trenčín | Zabezpečenie vozidiel IGLA',
   description:
-    'Ochrana vozidiel Trenčín. Sofistikované zabezpečenie IGLA, autoalarmy, pasívny monitoring, parkovacie senzory. Zabezpečenie proti krádeži od roku 1996.',
+    'Zabezpečenie vozidiel IGLA, GPS monitoring a parkovacie senzory. Montáž v Trenčianskych Stankovciach pri Trenčíne. Vyžiadajte si ponuku pre svoje auto.',
   alternates: {
     canonical: SITE_URL + '/',
   },
@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <div className="w-full overflow-x-hidden">
       <NavbarNext />
-      <main className="w-full overflow-x-hidden">
+      <main id="main-content" className="w-full overflow-x-hidden">
         <Hero />
         <div className="space-y-0 divide-y divide-zinc-900/30 w-full">
           <About />

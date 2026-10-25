@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     locale: 'sk_SK',
     url: SITE_URL,
     siteName: 'Autoalarmy Trenčín',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -58,6 +59,22 @@ export default function RootLayout({
   return (
     <html lang="sk" suppressHydrationWarning>
       <body className="min-h-screen antialiased" suppressHydrationWarning>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'AutomotiveBusiness',
+          '@id': `${SITE_URL}/#business`,
+          name: 'ALCO.SK, s.r.o. – Autoalarmy Trenčín',
+          url: SITE_URL,
+          telephone: '+421911911876',
+          email: 'info@ochranavozidiel.sk',
+          address: {
+            '@type': 'PostalAddress', streetAddress: 'Malé Stankovce 237',
+            addressLocality: 'Trenčianske Stankovce', postalCode: '913 11', addressCountry: 'SK',
+          },
+          areaServed: ['Trenčín', 'Trenčianske Stankovce'],
+          sameAs: ['https://www.facebook.com/autoalarmytrencin'],
+        }) }} />
+        <a href="#main-content" className="skip-link">Prejsť na obsah</a>
         <Providers>
           <TooltipProvider>
             <Sonner />

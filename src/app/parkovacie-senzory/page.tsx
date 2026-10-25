@@ -24,7 +24,7 @@ import {
 import Link from 'next/link';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
-const PAGE_URL = SITE_URL + '/parkovacie-senzory/';
+const PAGE_URL = SITE_URL + '/parkovacie-senzory';
 
 export const metadata: Metadata = {
   title: 'Parkovacie snímače Trenčín | Montáž parkovacích senzorov',
@@ -197,7 +197,7 @@ export default function ParkovacieSenzoryPage() {
         <Phone className="h-6 w-6" />
       </a>
 
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* HERO - fixná výška vsade */}
         <section
           className="relative overflow-hidden bg-black flex items-center justify-center"

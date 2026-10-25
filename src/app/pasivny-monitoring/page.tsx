@@ -5,10 +5,10 @@ import PageHeader from '@/components/sections/PageHeader';
 import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
-const PAGE_URL = SITE_URL + '/pasivny-monitoring/';
+const PAGE_URL = SITE_URL + '/pasivny-monitoring';
 
 export const metadata: Metadata = {
-  title: 'Pasívny monitoring | GPS lokalizácia vozidiel | Autoalarmy Trenčín',
+  title: 'Pasívny monitoring | GPS lokalizácia vozidiel',
   description:
     'Pasívny monitoring a GPS lokalizácia vozidiel. GSM moduly, sledovanie polohy. Ochrana vozidiel Trenčín.',
   alternates: {
@@ -29,7 +29,7 @@ export default function PasivnyMonitoringPage() {
   return (
     <>
       <NavbarNext />
-      <main className="pt-20 divide-y divide-zinc-900/30">
+      <main id="main-content" className="pt-20 divide-y divide-zinc-900/30">
         <PageHeader
           title="Pasívny monitoring"
           subtitle="GPS a GSM lokalizácia vozidiel"

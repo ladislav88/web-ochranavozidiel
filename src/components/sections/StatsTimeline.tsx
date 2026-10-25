@@ -30,7 +30,7 @@ const EASING = (t: number) => 1 - Math.pow(1 - t, 4);
 export default function StatsTimeline() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [isVisible, setIsVisible] = useState(false);
-  const [displayValues, setDisplayValues] = useState<number[]>([0, 0, 0]);
+  const [displayValues, setDisplayValues] = useState<number[]>(STATS.map((stat) => stat.target));
   const hasAnimated = useRef(false);
 
   useEffect(() => {

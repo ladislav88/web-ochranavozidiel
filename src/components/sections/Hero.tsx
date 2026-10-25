@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       className="relative overflow-hidden bg-black flex items-center justify-center w-full"
-      style={{ height: HERO_HEIGHT_PX }}
+      style={{ minHeight: HERO_HEIGHT_PX }}
     >
       {/* Hero Background Image - WebP pre výkon */}
       <div className="absolute inset-0 w-full h-full">
@@ -22,17 +22,17 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black"></div>
       </div>
       
-      <div className="container mx-auto px-4 max-w-screen-xl relative z-20 w-full pt-16">
+      <div className="container mx-auto px-4 max-w-screen-xl relative z-20 w-full pt-32 pb-12">
         <div className="max-w-[1400px] mx-auto text-center stagger-animate">
           <FadeIn direction="up" className="mb-6">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#3a86c9] drop-shadow-lg">
-              IGLA Bezpečnostný Systém
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
+              Zabezpečenie vozidiel IGLA v Trenčíne
             </h1>
           </FadeIn>
           
           <FadeIn direction="up" delay="0.1s" className="mb-8">
             <p className="text-lg md:text-xl text-gray-300 max-w-prose mx-auto leading-relaxed">
-              Najmodernejši system, ktory chrani vozidlo sofistikovaným algoritnom vo viacerých bodoch naraz.
+              Digitálny imobilizér, odborná montáž a osobné poradenstvo v Trenčianskych Stankovciach pri Trenčíne.
             </p>
           </FadeIn>
           
@@ -42,7 +42,7 @@ const Hero = () => {
                 <Shield className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                 <Car className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
                 <AlertDescription className="text-left text-sm md:text-base">
-                  Nedajte šancu zlodejom. Digitálny imobilizér IGLA ochráni vaše auto aj pred modernými spôsobmi krádeže auta, akými sú použitie retranslátorov (zosilňovačov signálu) pri autách s bezkľúčovým štartom alebo voči krádeži pomocou zariadenia „Gameboy„.
+                  Samotný kľúč nemusí stačiť. IGLA pridáva ďalšie overenie pred jazdou pomocou tajnej sekvencie tlačidiel vo vozidle. Kompatibilitu a vhodné riešenie overíme podľa značky, modelu a roku výroby.
                 </AlertDescription>
               </div>
             </Alert>
@@ -52,8 +52,11 @@ const Hero = () => {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#e06329] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#c85823] shadow-lg hover:shadow-[#e06329]/30"
             >
-              Chcem zistiť cenu
+              Získať ponuku pre moje auto
             </Link>
+            <a href="tel:+421911911876" className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-4 font-semibold text-white hover:bg-white/10 ml-0 sm:ml-4 mt-3 sm:mt-0">
+              Zavolať 0911 911 876
+            </a>
           </FadeIn>
         </div>
       </div>

@@ -3,7 +3,7 @@ import NavbarNext from '@/components/layout/NavbarNext';
 import Footer from '@/components/layout/Footer';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
-const PAGE_URL = SITE_URL + '/certifikaty/';
+const PAGE_URL = SITE_URL + '/certifikaty';
 
 export const metadata: Metadata = {
   title: 'Profil a certifikáty | ALCO.SK - Ochrana vozidiel',
@@ -18,7 +18,7 @@ export default function CertifikatyPage() {
   return (
     <>
       <NavbarNext />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <section className="section-container py-16 md:py-20">
           <h1 className="section-title mb-12">Profil, Certifikáty</h1>
 

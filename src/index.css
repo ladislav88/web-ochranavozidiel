@@ -240,3 +240,12 @@
     }
   }
 }
+
+/* Keyboard navigation and motion preferences. */
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; transform: translateY(-180%); padding: 12px 20px; background: white; color: black; border-radius: 8px; }
+.skip-link:focus { transform: translateY(0); }
+#contact, #main-content { scroll-margin-top: 110px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #fb923c; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

@@ -8,10 +8,10 @@ import { Separator } from '@/components/ui/separator';
 import { Card, CardContent } from '@/components/ui/card';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
-const PAGE_URL = SITE_URL + '/kontakt/';
+const PAGE_URL = SITE_URL + '/kontakt';
 
 export const metadata: Metadata = {
-  title: 'Kontakt | Autoalarmy Trenčín',
+  title: 'Kontakt',
   description:
     'Kontaktujte nás. Zabezpečenie vozidiel, cenová ponuka. Autoalarmy Trenčín - +421 911 911 876.',
   alternates: {
@@ -32,7 +32,7 @@ export default function KontaktPage() {
   return (
     <>
       <NavbarNext />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <PageHeader
           title="Kontaktujte nás"
           subtitle="Sme tu pre vás v prípade akýchkoľvek otázok"

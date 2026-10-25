@@ -4,7 +4,7 @@ import { Shield, Home, Phone, Mail } from 'lucide-react';
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
-      <main className="flex-1 flex items-center justify-center pt-24 pb-16 px-4">
+      <main id="main-content" className="flex-1 flex items-center justify-center pt-24 pb-16 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-8">
             <Shield className="h-24 w-24 mx-auto text-[#e06329] opacity-80" />
