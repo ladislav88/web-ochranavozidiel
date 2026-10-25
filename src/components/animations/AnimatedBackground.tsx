@@ -21,6 +21,8 @@ const AnimatedBackground: React.FC = () => {
   const frameCountRef = useRef(0);
   
   useEffect(() => {
+    // Keep decorative drawing off the mobile critical rendering path.
+    if (window.matchMedia('(max-width: 767px), (prefers-reduced-motion: reduce)').matches) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
 

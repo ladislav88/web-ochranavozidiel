@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 import FadeIn from '../animations/FadeIn';
 import { Check, ArrowRight } from 'lucide-react';
 import CustomButton from '../ui/CustomButton';
@@ -50,7 +51,7 @@ const TechnicalSpecifications = () => {
               
               <div className="pt-4">
                 <CustomButton 
-                  className="bg-orange-500 hover:bg-orange-600 text-white"
+                  className="bg-[#b74314] hover:bg-[#98360e] text-white"
                   href="/kontakt"
                 >
                   Chcem zabezpečiť svoje vozidlo
@@ -62,11 +63,14 @@ const TechnicalSpecifications = () => {
           
           <FadeIn direction="left">
             <div className="relative">
-              <img 
+              <Image 
                 src="/lovable-uploads/51c0177d-1558-4b3c-8c2b-7ecd940b537d.png" 
                 alt="Digitálny imobilizér IGLA"
-                loading="lazy"
-                className="w-full rounded-lg"
+                width={1920}
+                height={853}
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                quality={75}
+                className="w-full h-auto rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
