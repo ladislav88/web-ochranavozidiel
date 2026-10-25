@@ -204,11 +204,11 @@ export default function ParkovacieSenzoryPage() {
           style={{ height: HERO_HEIGHT_PX }}
         >
           <div className="absolute inset-0 w-full h-full">
-            <img
+            <Image
               src={HERO_BACKGROUND_IMAGE}
               alt={HERO_BACKGROUND_ALT}
               className="w-full h-full object-cover object-center opacity-70"
-              fetchPriority="high"
+              fill sizes="100vw" priority quality={75}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-zinc-900/40 to-black" />
           </div>

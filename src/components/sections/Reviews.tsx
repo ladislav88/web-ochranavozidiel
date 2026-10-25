@@ -1,29 +1,27 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import FadeIn from '../animations/FadeIn';
 
 type ReviewProps = {
   name: string;
-  image: string;
   rating: number;
   text: string;
   date: string;
 };
 
-const ReviewCard = ({ name, image, rating, text, date }: ReviewProps) => {
+const ReviewCard = ({ name, rating, text, date }: ReviewProps) => {
   return (
     <div className="bg-black border border-white/10 rounded-lg p-6 shadow-lg relative overflow-hidden">
       <div className="flex items-center mb-4">
         <Avatar className="h-14 w-14 border-2 border-[#0EA5E9]">
-          <AvatarImage src={image} alt={name} />
           <AvatarFallback className="bg-orange-500/20 text-white">
             {name.split(' ').map(n => n[0]).join('')}
           </AvatarFallback>
         </Avatar>
         <div className="ml-4">
-          <h4 className="font-medium text-white text-lg">{name}</h4>
+          <h3 className="font-medium text-white text-lg">{name}</h3>
           <div className="flex items-center">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star 
@@ -46,42 +44,36 @@ const Reviews = () => {
   const reviews = [
     {
       name: "Martin Kováč",
-      image: "/lovable-uploads/photo-random-1.jpg",
       rating: 5,
       text: "Systém IGLA mi zachránil auto dvakrát počas dvoch rokov. Zlodeji sa snažili, ale nedokázali ho hacknúť. Najlepšia investícia pre moje BMW.",
       date: "15. marec 2023"
     },
     {
       name: "Petra Nováková",
-      image: "/lovable-uploads/photo-random-2.jpg",
       rating: 5,
       text: "Ako žena som sa bála, že by som mohla mať problém s ovládaním, ale je to neuveriteľne jednoduché. A to najdôležitejšie - cítim sa bezpečne aj v noci na parkovisku.",
       date: "7. február 2023"
     },
     {
       name: "Tomáš Hudec",
-      image: "/lovable-uploads/photo-random-3.jpg",
       rating: 4,
       text: "Po krádeži môjho predchádzajúceho auta som nenechal nič na náhodu. IGLA poskytuje neuveriteľný pocit istoty. Montáž bola rýchla a profesionálna.",
       date: "22. október 2022"
     },
     {
       name: "Zuzana Krajčíová",
-      image: "/lovable-uploads/photo-random-4.jpg",
       rating: 5,
       text: "Moje Audi A6 je teraz dobre chránené. To, čo ma presvedčilo, je, že systém je úplne skrytý a nezasahuje do elektroniky vozidla. Odporúčam všetkým.",
       date: "3. december 2022"
     },
     {
       name: "Marek Varga",
-      image: "/lovable-uploads/photo-random-5.jpg",
       rating: 5,
       text: "Najlepší zabezpečovací systém, aký som kedy mal. Po inštalácii som urobil test - nikto z mojich priateľov nevedel, ako auto naštartovať, aj keď mali kľúče.",
       date: "18. január 2023"
     },
     {
       name: "Jana Moravčíková",
-      image: "/lovable-uploads/photo-random-6.jpg",
       rating: 5,
       text: "Ako majiteľka Mercedes-Benz som si nemohla dovoliť riskovať. IGLA poskytuje dokonalú ochranu a páči sa mi, že nepotrebujem žiadne ďalšie diaľkové ovládače.",
       date: "5. apríl 2023"

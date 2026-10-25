@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import FadeIn from '@/components/animations/FadeIn';
 import { HERO_BACKGROUND_IMAGE, HERO_BACKGROUND_ALT, HERO_HEIGHT_PX } from '@/constants/hero';
 
@@ -16,11 +17,14 @@ const PageHeader = ({ title, subtitle, imageSrc = HERO_BACKGROUND_IMAGE }: PageH
     >
       {/* Header background image - WebP pre výkon */}
       <div className="absolute inset-0 w-full h-full">
-        <img
+        <Image
           src={imageSrc}
           alt={`${title} - ${HERO_BACKGROUND_ALT}`}
           className="w-full h-full object-cover object-center opacity-70"
-          fetchPriority="high"
+          fill
+          sizes="100vw"
+          priority
+          quality={75}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black"></div>
       </div>

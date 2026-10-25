@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
@@ -11,10 +12,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex-shrink-0">
             <Link href="/">
-              <img 
+              <Image 
                 src="/lovable-uploads/1e42a538-d3c5-4058-aaf6-803116f70813.png" 
                 alt="ALCO Security Logo" 
-                className="h-14"
+                width={600} height={224} sizes="150px" className="h-14 w-auto"
               />
             </Link>
           </div>

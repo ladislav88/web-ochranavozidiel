@@ -2,10 +2,11 @@
 const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
   async redirects() {
     const OLD_URLS = [
+      { source: '/index.php', destination: '/' },
       { source: '/autoalarmy', destination: '/sofistikovane-zabezpecenie' },
       { source: '/autoalarmy/', destination: '/sofistikovane-zabezpecenie/' },
       { source: '/tajne-vypinace', destination: '/sofistikovane-zabezpecenie' },

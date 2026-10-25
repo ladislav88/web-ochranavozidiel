@@ -70,7 +70,7 @@ const About = () => {
         
         <FadeIn direction="up" className="mt-8 text-center">
           <CustomButton 
-            className="bg-[#e06329] hover:bg-[#c85823] text-white mx-auto"
+            className="bg-[#b74314] hover:bg-[#98360e] text-white mx-auto"
             href="/sofistikovane-zabezpecenie"
           >
             Zistite viac o systéme IGLA
