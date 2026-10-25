@@ -28,7 +28,7 @@ const About = () => {
             {
               icon: <Key className="h-10 w-10 text-[#e06329]" />,
               title: "Jednoduchá obsluha",
-              description: "Žiadny ovládač ani aplikácie, stačí vaše originálne kľúče od auta"
+              description: "Autorizácia tajnou sekvenciou pomocou pôvodných tlačidiel vozidla"
             },
             {
               icon: <Shield className="h-10 w-10 text-[#e06329]" />,
@@ -43,7 +43,7 @@ const About = () => {
             {
               icon: <Lock className="h-10 w-10 text-[#e06329]" />,
               title: "Spoľahlivá ochrana",
-              description: "Využíva neprelomiteľný kód a digitálnu komunikáciu s riadiacimi jednotkami"
+              description: "Pridáva ďalšiu vrstvu ochrany pomocou digitálnej komunikácie s vozidlom"
             },
             {
               icon: <Car className="h-10 w-10 text-[#e06329]" />,
@@ -53,7 +53,7 @@ const About = () => {
             {
               icon: <Wrench className="h-10 w-10 text-[#e06329]" />,
               title: "Profesionálna montáž",
-              description: "Inštalácia certifikovanými technikmi zaručuje maximálnu účinnosť"
+              description: "Odborná inštalácia, nastavenie a vysvetlenie obsluhy pri odovzdaní"
             },
           ].map((item, index) => (
             <FadeIn key={index} direction="up" delay={`${index * 0.1}s`} className="h-full col-span-12 md:col-span-6 lg:col-span-4">

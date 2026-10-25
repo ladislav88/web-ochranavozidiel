@@ -8,8 +8,8 @@ const HowItWorksSections = () => {
   const features = [
     {
       icon: <ShieldCheck className="h-10 w-10 text-orange-500" />,
-      title: "Neprekonateľná ochrana",
-      description: "IGLA je systém, ktorý spoľahlivo chráni vozidlo pred krádežou. Nevyužíva rádiový signál, preto ho zlodeji nedokážu hacknúť."
+      title: "Ďalšia vrstva ochrany",
+      description: "Digitálny imobilizér pridáva k pôvodnému zabezpečeniu vozidla ďalšiu autorizáciu pred jazdou."
     },
     {
       icon: <Key className="h-10 w-10 text-orange-500" />,
@@ -29,12 +29,12 @@ const HowItWorksSections = () => {
     {
       icon: <ShieldAlert className="h-10 w-10 text-orange-500" />,
       title: "Anti-scanning technológia",
-      description: "IGLA používa pokročilú anti-scanning technológiu, ktorá znemožňuje akékoľvek pokusy o skenovanie a kopírovanie signálu."
+      description: "IGLA používa pokročilú anti-scanning technológiu, ktorá sťažuje neoprávnené získanie autorizačných údajov."
     },
     {
       icon: <FileCode className="h-10 w-10 text-orange-500" />,
       title: "Inteligentný algoritmus",
-      description: "Systém využíva sofistikovaný šifrovací algoritmus, vďaka ktorému je každá IGLA unikátna a nemožno ju skopírovať ani duplikovať."
+      description: "Systém využíva sofistikovaný šifrovací algoritmus, vďaka ktorému je každá IGLA unikátna a autorizácia je viazaná na nastavenie konkrétneho systému."
     }
   ];
 

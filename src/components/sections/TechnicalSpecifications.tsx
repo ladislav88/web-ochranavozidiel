@@ -13,7 +13,7 @@ const TechnicalSpecifications = () => {
     "Rozmery: 54 x 33 x 15 mm",
     "Komunikačný protokol: CAN, LIN",
     "Šifrovanie: AES-128",
-    "Kompatibilita: Všetky moderné vozidlá s CAN zbernicou",
+    "Kompatibilita: Overujeme podľa značky, modelu a roku výroby",
     "IP krytie: IP67 (odolné voči vode a prachu)"
   ];
 
@@ -44,7 +44,7 @@ const TechnicalSpecifications = () => {
               
               <div className="pt-6">
                 <p className="text-gray-400 italic">
-                  IGLA je certifikovaná podľa európskych noriem a spĺňa všetky bezpečnostné požiadavky pre automobilové elektronické zariadenia.
+                  Parametre sa môžu líšiť podľa verzie systému. Presnú špecifikáciu a spôsob montáže potvrdíme pri výbere riešenia pre vaše vozidlo.
                 </p>
               </div>
               
@@ -64,7 +64,8 @@ const TechnicalSpecifications = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/51c0177d-1558-4b3c-8c2b-7ecd940b537d.png" 
-                alt="IGLA vehicle security system" 
+                alt="Digitálny imobilizér IGLA"
+                loading="lazy"
                 className="w-full rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>

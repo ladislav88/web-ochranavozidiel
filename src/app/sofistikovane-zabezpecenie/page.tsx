@@ -8,10 +8,10 @@ import InstallationProcess from '@/components/sections/InstallationProcess';
 import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
-const PAGE_URL = SITE_URL + '/sofistikovane-zabezpecenie/';
+const PAGE_URL = SITE_URL + '/sofistikovane-zabezpecenie';
 
 export const metadata: Metadata = {
-  title: 'Sofistikované zabezpečenie vozidiel | IGLA | Autoalarmy Trenčín',
+  title: 'Sofistikované zabezpečenie vozidiel | IGLA',
   description:
     'Sofistikované zabezpečenie vozidiel proti krádeži. IGLA systém, autoalarmy, tajné vypínače, motoralarmy. Ochrana vozidiel Trenčín.',
   alternates: {
@@ -33,7 +33,7 @@ export default function SofistikovaneZabezpeceniePage() {
   return (
     <>
       <NavbarNext />
-      <main className="pt-20 divide-y divide-zinc-900/30">
+      <main id="main-content" className="pt-20 divide-y divide-zinc-900/30">
         <PageHeader
           title="Sofistikované zabezpečenie"
           subtitle="Dokonalá ochrana vozidla bez ovládača"

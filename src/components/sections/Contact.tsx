@@ -188,14 +188,14 @@ const Contact = () => {
           </div>
           <h2 className="section-title">Spýtajte sa nás</h2>
           <p className="section-subtitle">
-            Obratom vás budeme kontaktovať
+            Napíšte značku, model a rok výroby auta. Overíme možnosti zabezpečenia a pripravíme vám ponuku.
           </p>
         </div>
         
         <FadeIn direction="up" delay="0.4s">
           <Card className="max-w-[1120px] mx-auto glassmorphism border-t border-blue-500/20 bg-gradient-to-b from-zinc-500/95 to-zinc-600/95 shadow-[0_0_25px_rgba(58,134,201,0.15)] rounded-2xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-orange-500/5 pointer-events-none"></div>
-            <CardContent className="p-8 md:p-10">
+            <CardContent className="p-5 sm:p-8 md:p-10">
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -205,6 +205,8 @@ const Contact = () => {
                     </label>
                     <Input
                       id="name"
+                      name="name"
+                      autoComplete="name"
                       type="text"
                       className="w-full px-4 py-2 rounded-md border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all"
                       placeholder="Vaše meno"
@@ -221,6 +223,8 @@ const Contact = () => {
                     </label>
                     <Input
                       id="email"
+                      name="email"
+                      autoComplete="email"
                       type="email"
                       className="w-full px-4 py-2 rounded-md border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all"
                       placeholder="vase.meno@example.sk"
@@ -239,6 +243,8 @@ const Contact = () => {
                     </label>
                     <Input
                       id="phone"
+                      name="phone"
+                      autoComplete="tel"
                       type="tel"
                       className="w-full px-4 py-2 rounded-md border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all"
                       placeholder="+421 XXX XXX XXX"
@@ -254,6 +260,8 @@ const Contact = () => {
                     </label>
                     <Input
                       id="city"
+                      name="city"
+                      autoComplete="address-level2"
                       type="text"
                       className="w-full px-4 py-2 rounded-md border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all"
                       placeholder="Mesto z ktorého prichádzate"
@@ -272,7 +280,7 @@ const Contact = () => {
                     value={formData.subject} 
                     onValueChange={(value) => handleSelectChange('subject', value)}
                   >
-                    <SelectTrigger className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                    <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                       <SelectValue placeholder="Vyberte z možností" />
                     </SelectTrigger>
                     <SelectContent>
@@ -299,7 +307,7 @@ const Contact = () => {
                           value={formData.vehicleBrand} 
                           onValueChange={(value) => handleSelectChange('vehicleBrand', value)}
                         >
-                          <SelectTrigger className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                          <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                             <SelectValue placeholder="Vyberte značku" />
                           </SelectTrigger>
                           <SelectContent className="max-h-[300px]">
@@ -320,7 +328,7 @@ const Contact = () => {
                             value={formData.vehicleModel} 
                             onValueChange={(value) => handleSelectChange('vehicleModel', value)}
                           >
-                            <SelectTrigger className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                            <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                               <SelectValue placeholder="Vyberte model" />
                             </SelectTrigger>
                             <SelectContent className="max-h-[300px]">
@@ -371,7 +379,7 @@ const Contact = () => {
                             value={formData.vehicleMonth} 
                             onValueChange={(value) => handleSelectChange('vehicleMonth', value)}
                           >
-                            <SelectTrigger className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                            <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                               <SelectValue placeholder="Mesiac" />
                             </SelectTrigger>
                             <SelectContent className="max-h-[300px]">
@@ -391,7 +399,7 @@ const Contact = () => {
                           value={formData.startMethod} 
                           onValueChange={(value) => handleSelectChange('startMethod', value)}
                         >
-                          <SelectTrigger className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                          <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                             <SelectValue placeholder="Vyberte spôsob štartovania" />
                           </SelectTrigger>
                           <SelectContent>
@@ -412,7 +420,7 @@ const Contact = () => {
                           value={formData.engineType} 
                           onValueChange={(value) => handleSelectChange('engineType', value)}
                         >
-                          <SelectTrigger className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
+                          <SelectTrigger id="subject" className="w-full border border-white/10 bg-white/5 focus:border-[#3a86c9]/50 focus:ring-[#3a86c9]/20 transition-all">
                             <SelectValue placeholder="Vyberte motorizáciu" />
                           </SelectTrigger>
                           <SelectContent className="max-h-[300px]">

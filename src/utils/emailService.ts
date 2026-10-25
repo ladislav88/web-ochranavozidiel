@@ -7,6 +7,7 @@ export interface EmailData {
   email: string;
   phone: string;
   city?: string;
+  subject?: string;
   message?: string;
   vehicleBrand?: string;
   vehicleModel?: string;
@@ -20,6 +21,7 @@ export interface EmailData {
 
 export const sendEmail = async (data: EmailData) => {
   const templateParams = {
+    subject: data.subject || 'Dopyt z webu',
     from_name: data.name,
     from_email: data.email,
     phone: data.phone,
