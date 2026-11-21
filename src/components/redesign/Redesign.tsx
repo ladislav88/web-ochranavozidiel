@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ShieldCheck, MapPin, Phone, Check, Fingerprint, LockKeyhole, Wrench, Building2, ArrowUpRight } from 'lucide-react';
+import { ShieldCheck, MapPin, Phone, Check, Fingerprint, LockKeyhole, Wrench, ArrowUpRight } from 'lucide-react';
 import { services } from './services';
 import ContactOffer from './ContactOffer';
 import SiteHeader from './SiteHeader';
@@ -28,7 +28,6 @@ export default function Redesign() {
       <IGLAFlagship/>
       <section id="riesenia" className={styles.solutions}><div className={styles.sectionIntro}><div><p className={styles.eyebrow}>OCHRANA VOZIDLA A DOPLNKOVÉ SLUŽBY</p><h2>Ochrana ako základ.<br className={styles.mobileBreak}/> Doplnky podľa vás.</h2></div><p>Hlavným zameraním je zabezpečenie vozidiel proti krádeži.<br/>GPS monitoring a parkovacie systémy ponuku dopĺňajú.</p></div><div className={styles.serviceGrid}>{services.map(({id,name,label,icon:Icon,text,href})=><article key={id} className={`${styles.serviceCard} ${id==='igla'?styles.featured:''}`}><div className={styles.serviceTop}><Icon size={29} strokeWidth={1.4}/><span>{label}</span></div><h3>{name}</h3><p>{text}</p><div className={styles.serviceBottom}><a href="#ponuka" onClick={()=>selectService(id)}>Mám záujem</a><a href={href} className={styles.detailLink}>Viac o riešení</a></div></article>)}</div></section>
       <SecurityFilmSection/>
-      <div className={styles.objectBridge}><a href="/zabezpecenie-objektov"><Building2 size={22}/><span><b>Chránime aj váš domov a firmu.</b><small>Zabezpečenie objektov od ALCO.SK</small></span><ArrowUpRight size={20}/></a></div>
       <section id="montaz" className={styles.install}><div className={styles.installHeading}><p className={styles.eyebrow}>OSOBNE. ODBORNE. BEZ ZBYTOČNOSTÍ.</p><h2>Od prvého kontaktu<br/>po bezpečnejšiu jazdu.</h2><a href="/certifikaty" className={styles.textLink}>Spoznajte ALCO.SK</a></div><div className={styles.installSteps}>{[['Vyberieme riešenie','Overíme možnosti podľa vášho vozidla a vysvetlíme vám rozdiely.'],['Dohodneme montáž','Potvrdíme cenu aj termín. Vopred viete, s čím počítať.'],['Odovzdáme s vysvetlením','Ukážeme obsluhu a zostaneme vaším kontaktom pre ďalšiu podporu.']].map(([title,text])=><div key={title}><Check size={18}/><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></section>
       <Experience/>
       <div className={styles.objectBridge}><a href="/z-praxe"><Wrench size={22}/><span><b>Na montáži záleží. Presvedčte sa sami.</b><small>Skutočný prípad pred výmenou a po našej montáži.</small></span><ArrowUpRight size={20}/></a></div>
