@@ -26,6 +26,7 @@ export default function Redesign() {
       <div className={styles.objectBridge}><a href="/zabezpecenie-objektov"><Building2 size={22}/><span><b>Chránime aj váš domov a firmu.</b><small>Zabezpečenie objektov od ALCO.SK</small></span><ArrowUpRight size={20}/></a></div>
       <section id="montaz" className={styles.install}><div className={styles.installHeading}><p className={styles.eyebrow}>OSOBNE. ODBORNE. BEZ ZBYTOČNOSTÍ.</p><h2>Od prvého kontaktu<br/>po bezpečnejšiu jazdu.</h2><a href="/certifikaty" className={styles.textLink}>Spoznajte ALCO.SK</a></div><div className={styles.installSteps}>{[['Vyberieme riešenie','Overíme možnosti podľa vášho vozidla a vysvetlíme vám rozdiely.'],['Dohodneme montáž','Potvrdíme cenu aj termín. Vopred viete, s čím počítať.'],['Odovzdáme s vysvetlením','Ukážeme obsluhu a zostaneme vaším kontaktom pre ďalšiu podporu.']].map(([title,text])=><div key={title}><Check size={18}/><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></section>
       <Experience/>
+      <div className={styles.objectBridge}><a href="/z-praxe"><Wrench size={22}/><span><b>Na montáži záleží. Presvedčte sa sami.</b><small>Skutočný prípad pred výmenou a po našej montáži.</small></span><ArrowUpRight size={20}/></a></div>
       <ContactOffer service={selectedService}/>
     </main>
     <SiteFooter/>
