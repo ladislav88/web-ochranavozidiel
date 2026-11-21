@@ -68,9 +68,10 @@ export default function RootLayout({
           telephone: '+421911911876',
           email: 'info@ochranavozidiel.sk',
           address: {
-            '@type': 'PostalAddress', streetAddress: 'Malé Stankovce 237',
-            addressLocality: 'Trenčianske Stankovce', postalCode: '913 11', addressCountry: 'SK',
+            '@type': 'PostalAddress', streetAddress: 'Bratislavská ulica',
+            addressLocality: 'Trenčín', addressCountry: 'SK',
           },
+          description: 'Montážna dielňa na Bratislavskej ulici v Trenčíne. Návštevu je potrebné vopred dohodnúť telefonicky.',
           areaServed: ['Trenčín', 'Trenčianske Stankovce'],
           sameAs: ['https://www.facebook.com/autoalarmytrencin'],
         }) }} />
