@@ -38,9 +38,12 @@ export const metadata: Metadata = {
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   icons: {
-    icon: [{ url: '/alco-icon.png', type: 'image/png' }, { url: '/favicon.ico', sizes: 'any' }],
-    shortcut: '/alco-icon.png',
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    icon: [
+      { url: '/favicon-alco-192.png?v=20261121', type: 'image/png', sizes: '192x192' },
+      { url: '/favicon-alco-32.png?v=20261121', type: 'image/png', sizes: '32x32' },
+    ],
+    shortcut: '/favicon-alco-32.png?v=20261121',
+    apple: [{ url: '/apple-touch-icon.png?v=20261121', sizes: '180x180', type: 'image/png' }],
   },
   twitter: {
     card: 'summary_large_image',
