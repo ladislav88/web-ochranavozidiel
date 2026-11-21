@@ -4,7 +4,7 @@ import SiteShell from '@/components/redesign/SiteShell';
 import { PageIntro, Features } from '@/components/redesign/PageParts';
 import styles from '@/components/redesign/redesign.module.css';
 export const metadata:Metadata={title:'Zabezpečenie objektov | Alarmy a kamery ALCO.SK',description:'Ochrana domov, firiem a prevádzok od ALCO.SK. Alarmy, kamerové systémy a elektrické riešenia v Trenčíne a okolí. Spoznajte naše služby pre objekty.',alternates:{canonical:'https://www.autoalarmy-trencin.sk/zabezpecenie-objektov'},openGraph:{title:'Zabezpečenie objektov od ALCO.SK',description:'Alarmy, kamery a elektrické riešenia pre domy, firmy a prevádzky.',url:'https://www.autoalarmy-trencin.sk/zabezpecenie-objektov'}};
-export default function ObjectSecurityPage(){return <SiteShell quoteHref="https://www.alco.sk/kontakt">
+export default function ObjectSecurityPage(){return <SiteShell hideObjectBanner quoteHref="https://www.alco.sk/kontakt">
   <PageIntro eyebrow="ZABEZPEČENIE OBJEKTOV · ALCO.SK" title="Bezpečie sa nekončí" accent="pri vašom aute." description="Pod značkou ALCO.SK sa venujeme aj ochrane domov, firiem a prevádzok. Navrhujeme a montujeme bezpečnostné a elektrické systémy podľa potrieb konkrétneho objektu." visual="objekty" cta="Prejsť na ALCO.SK" ctaHref="https://www.alco.sk/"/>
   <Features eyebrow="SLUŽBY PRE VÁŠ DOMOV A FIRMU" title="Premyslené riešenia pre každý priestor." items={[
     {icon:ShieldCheck,title:'Zabezpečovacie systémy',text:'Elektronická ochrana objektu, výber vhodných prvkov a odborná montáž. Rozsah riešenia navrhujeme podľa priestoru a jeho používania.'},
