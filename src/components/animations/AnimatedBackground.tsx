@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { usePathname } from 'next/navigation';
 
 interface Dot {
   x: number;
@@ -18,9 +19,11 @@ const AnimatedBackground: React.FC = () => {
   const dotsRef = useRef<Dot[]>([]);
   const animationRef = useRef<number>(0);
   const isMobile = useIsMobile();
+  const pathname = usePathname();
   const frameCountRef = useRef(0);
   
   useEffect(() => {
+    if (pathname === '/') return;
     // Keep decorative drawing off the mobile critical rendering path.
     if (window.matchMedia('(max-width: 767px), (prefers-reduced-motion: reduce)').matches) return;
     const canvas = canvasRef.current;
@@ -189,8 +192,9 @@ const AnimatedBackground: React.FC = () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationRef.current);
     };
-  }, [isMobile]);
+  }, [isMobile, pathname]);
 
+  if (pathname === '/') return null;
   return (
     <canvas
       ref={canvasRef}
