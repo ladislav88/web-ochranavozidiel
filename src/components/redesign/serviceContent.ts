@@ -3,7 +3,7 @@ import { Fingerprint, ShieldCheck, KeyRound, MapPin, Navigation, Smartphone, Sca
 export const serviceContent = {
   igla: {
     id:'igla',path:'/sofistikovane-zabezpecenie',eyebrow:'ZABEZPEČENIE VOZIDLA',title:'Zabezpečenie IGLA.',accent:'Váš kľúč nemusí stačiť.',
-    description:'Digitálny imobilizér pridáva ďalšiu autorizáciu pred jazdou. Možnosti pre vaše auto overíme a systém odborne namontujeme v Trenčianskych Stankovciach pri Trenčíne.',
+    description:'Digitálny imobilizér pridáva ďalšiu autorizáciu pred jazdou. Možnosti pre vaše auto overíme a systém odborne namontujeme v Trenčíne.',
     featuresTitle:'Diskrétna ochrana v každodennom živote.',features:[
       {icon:ShieldCheck,title:'Ďalšia vrstva ochrany',text:'K pôvodnému zabezpečeniu vozidla pribudne samostatná autorizácia. Samotné získanie kľúča tak nemusí stačiť na odjazd.'},
       {icon:Fingerprint,title:'Autorizácia, ktorú poznáte vy',text:'Tajná sekvencia sa zadáva pomocou vybraných tlačidiel vo vozidle. Konkrétny spôsob závisí od auta a zvoleného systému.'},

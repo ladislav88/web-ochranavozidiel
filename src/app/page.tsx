@@ -6,7 +6,7 @@ const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 export const metadata: Metadata = {
   title: { absolute: 'Autoalarmy Trenčín | Zabezpečenie vozidiel IGLA' },
   description:
-    'Zabezpečenie vozidiel IGLA, GPS monitoring a parkovacie senzory. Montáž v Trenčianskych Stankovciach pri Trenčíne. Vyžiadajte si ponuku pre svoje auto.',
+    'Zabezpečenie vozidiel IGLA, GPS monitoring a parkovacie senzory. Montáž v Trenčíne. Vyžiadajte si ponuku pre svoje auto.',
   alternates: {
     canonical: SITE_URL + '/',
   },
