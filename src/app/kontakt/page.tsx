@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Kontakt | Autoalarmy Trenčín',
     description: 'Kontaktné údaje. Cenová ponuka pre zabezpečenie vozidiel.',
     url: PAGE_URL,
-    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: SITE_URL + '/alco-social-preview-v2.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     title: 'Kontakt | Autoalarmy Trenčín',

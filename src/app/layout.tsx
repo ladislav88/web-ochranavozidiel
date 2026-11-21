@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: 'sk_SK',
     url: SITE_URL,
     siteName: 'Autoalarmy Trenčín',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/alco-social-preview-v2.jpg', width: 1200, height: 630 }],
   },
   icons: {
     icon: [
@@ -47,6 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['/alco-social-preview-v2.jpg'],
   },
   robots: {
     index: true,
