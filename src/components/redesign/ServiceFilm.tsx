@@ -5,7 +5,7 @@ import styles from './parkingFilm.module.css';
 const films={
  parking:{base:'parking-alco',title:'Parkovacie snímače od ALCO.SK Trenčín',headline:'Záruka kvality overená praxou.',subline:'Značkové snímače. Odborná montáž v Trenčíne.'},
  gps:{base:'gps-alco-v2',title:'GPS monitoring od ALCO.SK Trenčín',headline:'GPS monitoring bez mesačného paušálu.',subline:'Od 280 € bez DPH s montážou. Stačí vlastná SIM karta.'},
- igla:{base:'igla-pribeh-v4',title:'IGLA – prezentácia ochrany vozidla od ALCO.SK Trenčín',headline:'Certifikovaný partner IGLA · Trenčín',subline:'Od 480 € bez DPH vrátane BT príveskov a montáže.'},
+ igla:{base:'igla-pribeh-v5',title:'IGLA – prezentácia ochrany vozidla od ALCO.SK Trenčín',headline:'Certifikovaný partner IGLA · Trenčín',subline:'Od 480 € bez DPH vrátane BT príveskov a montáže.'},
 };
 export default function ServiceFilm({kind}:{kind:keyof typeof films}){
  const {base,title,headline,subline}=films[kind];
