@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import styles from './Experience.module.css';
 
-const experienceYears = new Date().getFullYear() - 1996;
+const experienceYears = new Date().getFullYear() - 2000;
 const metrics = [
-  { value: experienceYears, label: 'rokov skúseností', detail: 'od roku 1996' },
+  { value: experienceYears, label: 'rokov skúseností', detail: 'približne od roku 2000' },
   { value: 4680, label: 'zabezpečených vozidiel', detail: 'približný počet montáží', approximate: true },
   { value: 14, label: 'pokusov o krádež', detail: 'zaznamenaných v našej praxi' },
   { value: 0, label: 'ukradnutých vozidiel', detail: 'podľa našej evidencie' },
@@ -55,16 +55,16 @@ export default function Experience() {
   }, []);
 
   return <section ref={section} id="skusenosti" className={styles.section} aria-labelledby="experience-heading">
-    <div className={styles.heading}><div><p className={styles.eyebrow}>NAŠA PRAX V ČÍSLACH</p><h2 id="experience-heading">Ochrane vozidiel sa venujeme<br/><em>od roku 1996.</em></h2></div><a href="/certifikaty">Spoznajte naše zázemie <ArrowUpRight size={17} aria-hidden="true"/></a></div>
+    <div className={styles.heading}><div><p className={styles.eyebrow}>NAŠA PRAX V ČÍSLACH</p><h2 id="experience-heading">Ochrane vozidiel sa venujeme<br/><em>od roku 2000.</em></h2></div><a href="/certifikaty">Spoznajte naše zázemie <ArrowUpRight size={17} aria-hidden="true"/></a></div>
     <dl className={styles.metrics}>{metrics.map(metric => <div key={metric.label}>
       <dt>{metric.label}<small>{metric.detail}</small></dt>
       <dd><span className={styles.srOnly}>{metric.approximate ? 'Približne ' : ''}{formatNumber(metric.value)}</span><span className={styles.number} aria-hidden="true">{metric.approximate && <span className={styles.approx}>≈</span>}{formatNumber(Math.round(metric.value * progress))}</span></dd>
     </div>)}</dl>
     <ol className={styles.timeline}>
-      <li><span className={styles.milestone}>1996 · ZAČIATKY</span><h3>Vlastný vývoj.</h3><p>Vývoj prvotných bezpečnostných systémov a začiatky ochrany vozidiel.</p></li>
+      <li><span className={styles.milestone}>OKOLO ROKU 2000 · ZAČIATKY</span><h3>Vlastný vývoj.</h3><p>Vývoj prvotných bezpečnostných systémov a začiatky ochrany vozidiel.</p></li>
       <li><span className={styles.milestone}>ĎALŠIE OBDOBIE</span><h3>Skúsenosti s alarmami.</h3><p>Montáž systémov Magicar, Kopel, Cobra, Pandora a Keetec.</p></li>
       <li><span className={styles.milestone}>DNES · IGLA</span><h3>Digitálna autorizácia.</h3><p>Dnes sa zameriavame na digitálne zabezpečenie vozidiel systémom IGLA.</p></li>
     </ol>
-    <p className={styles.note}>Historické údaje podľa našej evidencie od roku 1996. Počet zabezpečených vozidiel je približný.</p>
+    <p className={styles.note}>Historické údaje podľa našej evidencie. Začiatky približne v roku 2000. Počet zabezpečených vozidiel je približný.</p>
   </section>;
 }
