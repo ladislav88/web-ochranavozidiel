@@ -48,3 +48,6 @@
 
 /* Make each service card a native link while preserving the quote action. */
 .serviceCard{position:relative;isolation:isolate;transition:border-color .2s,box-shadow .2s}.serviceCard .detailLink::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}.serviceCard .serviceBottom>a:first-child{position:relative;z-index:2}.serviceCard:hover,.serviceCard:focus-within{border-color:#b76a40;box-shadow:0 0 0 1px #ff793820}.serviceCard .detailLink:focus-visible{outline:none}.serviceCard .detailLink:focus-visible::after{outline:2px solid var(--orange);outline-offset:4px}
+
+/* Clearer brand at every viewport. */
+.header .logo img{width:140px}.header .logo{gap:16px}@media(max-width:1023px){.header .logo img{width:118px}.header .logo{gap:12px}}@media(max-width:767px){.header .logo img{width:112px}}
