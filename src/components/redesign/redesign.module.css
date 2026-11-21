@@ -51,3 +51,5 @@
 
 /* Clearer brand at every viewport. */
 .header .logo img{width:140px}.header .logo{gap:16px}@media(max-width:1023px){.header .logo img{width:118px}.header .logo{gap:12px}}@media(max-width:767px){.header .logo img{width:112px}}
+
+@media(max-width:767px){.header .logo>span{display:none}.header .smallCta{white-space:nowrap}}
