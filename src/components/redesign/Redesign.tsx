@@ -18,14 +18,14 @@ export default function Redesign() {
   const selectService=(service:string)=>{setSelectedService(service);setMenuOpen(false);};
   return <div className={styles.site}>
     <header className={styles.header}>
-      <a href="#" className={styles.logo} aria-label="ALCO — Autoalarmy Trenčín"><img src="/lovable-uploads/64cc852c-8709-41b4-b5e3-74c09fbbefed.png" width="600" height="224" alt="ALCO"/><span>AUTOALARMY<br/><b>TRENČÍN</b></span></a>
+      <a href="#" className={styles.logo} aria-label="ALCO — Autoalarmy Trenčín"><img src="/alco-logo.webp" width="256" height="96" alt="ALCO"/><span>AUTOALARMY<br/><b>TRENČÍN</b></span></a>
       <nav className={styles.desktopNav} aria-label="Hlavná navigácia"><a href="#riesenia">Riešenia</a><a href="#montaz">Montáž</a><a href="/certifikaty">O nás</a><a href="#ponuka">Kontakt</a></nav>
       <div className={styles.headerActions}><a href="tel:+421911911876" className={styles.headerPhone}><Phone size={16}/>0911 911 876</a><a href="#ponuka" className={styles.smallCta}>Zistiť cenu</a><button className={styles.menuToggle} aria-label={menuOpen?'Zavrieť menu':'Otvoriť menu'} aria-expanded={menuOpen} aria-controls="preview-menu" onClick={()=>setMenuOpen(v=>!v)}>{menuOpen?<X/>:<Menu/>}</button></div>
       {menuOpen&&<nav id="preview-menu" aria-label="Mobilná navigácia" className={styles.mobileNav}>{[['Riešenia','#riesenia'],['Montáž','#montaz'],['O nás','/certifikaty'],['Kontakt','#ponuka']].map(([label,href])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}<a href="tel:+421911911876">Zavolať 0911 911 876</a></nav>}
     </header>
     <main id="main-content">
       <section className={styles.hero} aria-labelledby="hero-heading">
-        <div className={styles.heroPhoto}><img src="/redesign-car.webp" alt="Ilustračná fotografia grafitového auta v tmavom štúdiu" width="1600" height="1067" fetchPriority="high"/></div>
+        <div className={styles.heroPhoto}><img src="/hero-black-suv.webp" alt="Ilustračná vizualizácia čierneho SUV so zapnutými svetlami" width="1440" height="960" fetchPriority="high"/></div>
         <div className={styles.heroShade}/>
         <div className={styles.heroContent}><p className={styles.eyebrow}><span/> OCHRANA VOZIDIEL · TRENČÍN A OKOLIE</p><h1 id="hero-heading">Vaše auto.<br/><em>V bezpečí.</em></h1><p className={styles.heroLead}>Inteligentné zabezpečenie IGLA.<br/>Odborná montáž. Pokoj pri každom parkovaní.</p><div className={styles.heroButtons}><a href="#ponuka" className={styles.primary}>Vybrať zabezpečenie</a><a href="tel:+421911911876" className={styles.secondary}><Phone size={17}/>Poradiť sa telefonicky</a></div><p className={styles.location}><MapPin size={15}/>Trenčianske Stankovce pri Trenčíne</p></div>
         <div className={styles.heroCaption}><ShieldCheck size={19}/><span>IGLA<span>DIGITÁLNY IMOBILIZÉR</span></span></div>
