@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Play, Pause, Volume2, ShieldCheck } from 'lucide-react';
 import styles from './parkingFilm.module.css';
 export default function ServiceFilm({kind}:{kind:'parking'|'gps'}){
- const gps=kind==='gps';const base=gps?'gps-alco':'parking-alco';const title=gps?'GPS monitoring StarLine od ALCO.SK Trenčín':'Parkovacie snímače od ALCO.SK Trenčín';
+ const gps=kind==='gps';const base=gps?'gps-alco-v2':'parking-alco';const title=gps?'GPS monitoring od ALCO.SK Trenčín':'Parkovacie snímače od ALCO.SK Trenčín';
  const player=useRef<HTMLVideoElement>(null);
  const [withSound,setWithSound]=useState(false);const [paused,setPaused]=useState(false);const [blocked,setBlocked]=useState(false);const [failed,setFailed]=useState(false);
  useEffect(()=>{const video=player.current;if(!video)return;let active=true;video.muted=true;video.play()?.catch(()=>{if(active){setBlocked(true);setPaused(true)}});return()=>{active=false};},[]);
@@ -12,5 +12,5 @@ export default function ServiceFilm({kind}:{kind:'parking'|'gps'}){
  return <figure className={styles.panel} aria-label={title}><div className={styles.frame}>
  <video ref={player} autoPlay muted={!withSound} loop={!withSound} controls={withSound} playsInline preload="metadata" tabIndex={withSound?0:-1} aria-label={title} poster={`/video/${base}-poster.webp`} onPlay={()=>{setPaused(false);setBlocked(false)}} onPause={()=>setPaused(true)}><source src={`/video/${base}.mp4`} type="video/mp4"/><track kind="captions" src={`/video/${base}-sk.vtt`} srcLang="sk" label="Slovenčina"/>Váš prehliadač nepodporuje prehrávanie videa.</video>
  {!withSound&&<><button type="button" className={styles.soundOverlay} onClick={playWithSound} aria-label={blocked?'Prehrať video so zvukom':'Zapnúť zvuk a prehrať video od začiatku'}><span className={styles.soundLabel}>{blocked?<Play size={18} aria-hidden="true"/>:<Volume2 size={18} aria-hidden="true"/>}{blocked?'Prehrať so zvukom':'Zapnúť zvuk'}</span></button><button type="button" className={styles.pausePreview} onClick={togglePreview} aria-label={paused?'Spustiť tichý náhľad':'Pozastaviť tichý náhľad'}>{paused?<Play size={18} aria-hidden="true"/>:<Pause size={18} aria-hidden="true"/>}</button></>}
- </div><figcaption className={styles.caption}><ShieldCheck size={22} aria-hidden="true"/><div><strong>{gps?'StarLine GPS bez paušálu za monitoring.':'Záruka kvality overená praxou.'}</strong><span>{gps?'Od 280 € bez DPH s montážou. SIM a dáta zvlášť.':'Značkové snímače. Odborná montáž v Trenčíne.'}</span></div></figcaption>{failed&&<p className={styles.error} role="alert">Video sa nepodarilo spustiť. Skúste ho prehrať znova.</p>}</figure>;
+ </div><figcaption className={styles.caption}><ShieldCheck size={22} aria-hidden="true"/><div><strong>{gps?'GPS monitoring bez mesačného paušálu.':'Záruka kvality overená praxou.'}</strong><span>{gps?'Od 280 € bez DPH s montážou. Stačí vlastná SIM karta.':'Značkové snímače. Odborná montáž v Trenčíne.'}</span></div></figcaption>{failed&&<p className={styles.error} role="alert">Video sa nepodarilo spustiť. Skúste ho prehrať znova.</p>}</figure>;
 }
