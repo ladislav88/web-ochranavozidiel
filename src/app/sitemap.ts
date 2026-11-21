@@ -13,6 +13,7 @@ const ROUTES: Array<{
   { path: '/parkovacie-senzory', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/certifikaty', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/kontakt', changeFrequency: 'monthly', priority: 0.5 },
+  { path: '/zabezpecenie-objektov', changeFrequency: 'monthly', priority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
