@@ -1,80 +1,34 @@
 import type { Metadata } from 'next';
-import NavbarNext from '@/components/layout/NavbarNext';
-import Footer from '@/components/layout/Footer';
-
+import { ShieldCheck, Wrench, MessageCircle, FileBadge, ArrowRight, MapPin, Phone } from 'lucide-react';
+import SiteShell from '@/components/redesign/SiteShell';
+import { PageIntro, Features, DetailSection, RelatedSolutions } from '@/components/redesign/PageParts';
+import styles from '@/components/redesign/redesign.module.css';
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/certifikaty';
 
 export const metadata: Metadata = {
-  title: 'Profil a certifikáty | ALCO.SK - Ochrana vozidiel',
+  title: 'O nás a odborné zázemie | ALCO.SK',
   description:
-    'Spoločnosť ALCO.SK, s.r.o. - licencia KR PZ Trenčín, ochrana vozidiel od roku 1996. Autoalarmy, GPS, parkovacie systémy.',
+    'Spoznajte ALCO.SK, s.r.o. Odborná montáž zabezpečenia vozidiel, GPS a parkovacích systémov v Trenčianskych Stankovciach pri Trenčíne.',
   alternates: {
     canonical: PAGE_URL,
   },
 };
 
-export default function CertifikatyPage() {
-  return (
-    <>
-      <NavbarNext />
-      <main id="main-content" className="pt-20">
-        <section className="section-container py-16 md:py-20">
-          <h1 className="section-title mb-12">Profil, Certifikáty</h1>
 
-          <div className="mx-auto max-w-prose space-y-8">
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Spoločnosť ALCO.SK, s.r.o. vznikla transformáciou živnostenskej
-              činnosti na právnu formu: spoločnosť s ručením obmedzeným. Prvotná
-              myšlienka tohto webu vznikla v roku 2006 na základe dlhoročných
-              skúseností v oblasti automobilovej ochrany. Spoločnosť ALCO.SK,
-              s.r.o. sa zaoberá predovšetkým ochranou vozidiel, montážou
-              autoalarmov, GPS systémov, elektronických tajných vypínačov
-              (imobilizérov), parkovacích systémov, hands free sád a ostatného
-              auto-elektro príslušenstva.
-            </p>
-
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Našim prvoradým cieľom je kvalita odvedenej práce a spokojnosť
-              zákazníka po všetkých stránkach. Všetky komponenty, ktoré montujeme
-              a predávame, sú dlhodobou praxou overené a ich funkčnosti sa teší
-              veľa spokojných zákazníkov. Samozrejmosťou je poskytovaný kvalitný
-              záručný aj pozáručný servis, ako aj technická podpora ku
-              nainštalovaným systémom a zariadeniam.
-            </p>
-
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Spoločnosť ALCO.SK, s.r.o. vlastní licenciu na prevádzkovanie
-              technickej služby vydanú a obnovovanú Krajským riaditeľstvom
-              Policajného zboru v Trenčíne v rozsahu činnosti § 7 ods. 1 zákona
-              č. 473/2005 Z.z. o súkromnej bezpečnosti pre projektovanie, montáž,
-              údržba, revízia, oprava.
-            </p>
-
-            <div className="border-t border-zinc-800 pt-12">
-              <h2 className="mb-8 text-xl font-semibold text-[#e06329] underline">
-                Získané certifikáty od roku 1996:
-              </h2>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {/* Placeholder pre obrázky certifikátov - doplníte neskôr */}
-                <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-zinc-700 bg-zinc-900/50 flex items-center justify-center text-sm text-muted-foreground">
-                  Certifikát 1
-                </div>
-                <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-zinc-700 bg-zinc-900/50 flex items-center justify-center text-sm text-muted-foreground">
-                  Certifikát 2
-                </div>
-                <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-zinc-700 bg-zinc-900/50 flex items-center justify-center text-sm text-muted-foreground">
-                  Certifikát 3
-                </div>
-              </div>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Obrázky certifikátov doplníte neskôr.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-}
+export default function AboutPage(){return <SiteShell>
+  <PageIntro eyebrow="O NÁS · ALCO.SK" title="Za ochranou auta" accent="stoja konkrétni ľudia." description="Sme ALCO.SK, s.r.o. V Trenčianskych Stankovciach pri Trenčíne sa venujeme zabezpečeniu vozidiel, GPS riešeniam a parkovacím systémom. Od výberu až po podporu zostávate v kontakte s nami." visual="about" cta="Prebrať možnosti pre moje auto"/>
+  <Features eyebrow="ČO JE PRE NÁS PODSTATNÉ" title="Dobrá montáž začína dobrým rozhovorom." items={[
+    {icon:MessageCircle,title:'Najprv počúvame',text:'Zaujíma nás, aké auto používate a čo od riešenia očakávate. Rozdiely vysvetlíme zrozumiteľne.'},
+    {icon:Wrench,title:'Záleží nám na prevedení',text:'Výber, umiestnenie a zapojenie prispôsobíme vozidlu. Pri odovzdaní si spoločne prejdeme fungovanie.'},
+    {icon:ShieldCheck,title:'Zostávame vaším kontaktom',text:'Záručný aj pozáručný servis a technická podpora k nami montovaným systémom sú súčasťou nášho prístupu.'},
+  ]}/>
+  <DetailSection eyebrow="NAŠE ZAMERANIE" title="Ochrana vozidiel. Odborný prístup." points={[
+    {title:'Digitálne zabezpečenie',text:'Ďalšia autorizácia pred jazdou a výber riešenia podľa konkrétneho auta.'},
+    {title:'GPS a lokalizačné systémy',text:'Prehľad o vozidle podľa vašich požiadaviek a funkcií zvolenej zostavy.'},
+    {title:'Parkovacie systémy',text:'Snímače a kamery pre lepší prehľad pri manévrovaní.'},
+  ]}><p>ALCO.SK, s.r.o. vznikla transformáciou živnostenskej činnosti. Naše zameranie vyrástlo z praxe v oblasti ochrany vozidiel a autoelektroniky.</p><p>Pri každom aute nám záleží na kvalite práce a na tom, aby majiteľ rozumel používaniu systému. Preto sa venujeme aj poradenstvu, nastaveniu a následnej podpore.</p></DetailSection>
+  <section id="opravnenie" className={`${styles.pageContainer} ${styles.contentSection}`}><div className={styles.credentialPanel}><div className={styles.credentialIcon}><FileBadge size={36} strokeWidth={1.3}/></div><div><p className={styles.eyebrow}>ODBORNÉ ZÁZEMIE</p><h2>Technická služba ALCO.SK</h2><p>Licencia na prevádzkovanie technickej služby č. PT 003641, vydaná Krajským riaditeľstvom Policajného zboru v Trenčíne. Na doklade je uvedená platnosť do 27. novembra 2033. Rozsah zahŕňa projektovanie, montáž, údržbu, revíziu a opravu.</p><a className={styles.documentLink} href="/doklady/licencia-technickej-sluzby.webp" target="_blank" rel="noopener noreferrer"><img src="/doklady/licencia-technickej-sluzby.webp" width="701" height="1024" loading="lazy" alt="Licencia technickej služby ALCO.SK č. PT 003641"/><span><b>Licencia technickej služby</b><small>PT 003641 · Otvoriť celý doklad</small></span><ArrowRight size={18}/></a><a href="/kontakt#firemne-udaje" className={styles.textLink}>Kontaktné a firemné údaje <ArrowRight size={15}/></a></div></div></section>
+  <RelatedSolutions/>
+  <section className={`${styles.pageContainer} ${styles.contentSection}`}><div className={styles.ctaBand}><div><p className={styles.eyebrow}>TRENČIANSKE STANKOVCE PRI TRENČÍNE</p><h2>Začnime vaším autom.</h2><p>Napíšte nám alebo zavolajte. Možnosti aj termín prejdeme spoločne.</p></div><div><a href="/kontakt#ponuka" className={styles.primary}>Vyžiadať ponuku <ArrowRight size={17}/></a><a href="tel:+421911911876" className={styles.introPhone}><Phone size={16}/>0911 911 876</a></div></div></section>
+</SiteShell>;}

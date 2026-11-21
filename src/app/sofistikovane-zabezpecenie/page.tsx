@@ -1,11 +1,5 @@
 import type { Metadata } from 'next';
-import NavbarNext from '@/components/layout/NavbarNext';
-import Footer from '@/components/layout/Footer';
-import PageHeader from '@/components/sections/PageHeader';
-import HowItWorksSections from '@/components/sections/HowItWorksSections';
-import FunctionalitySection from '@/components/sections/FunctionalitySection';
-import InstallationProcess from '@/components/sections/InstallationProcess';
-import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
+import ServicePage from '@/components/redesign/ServicePage';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/sofistikovane-zabezpecenie';
@@ -29,21 +23,4 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SofistikovaneZabezpeceniePage() {
-  return (
-    <>
-      <NavbarNext />
-      <main id="main-content" className="pt-20 divide-y divide-zinc-900/30">
-        <PageHeader
-          title="Sofistikované zabezpečenie"
-          subtitle="Dokonalá ochrana vozidla bez ovládača"
-        />
-        <HowItWorksSections />
-        <FunctionalitySection />
-        <InstallationProcess />
-        <TechnicalSpecifications />
-      </main>
-      <Footer />
-    </>
-  );
-}
+export default function Page() {return <ServicePage service="igla"/>;}

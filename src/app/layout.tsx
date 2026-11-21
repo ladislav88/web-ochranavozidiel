@@ -2,11 +2,6 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import '@/index.css';
 
-const AnimatedBackground = nextDynamic(
-  () => import('@/components/animations/AnimatedBackground'),
-  { ssr: false }
-);
-
 const Sonner = nextDynamic(
   () => import('@/components/ui/sonner').then((m) => ({ default: m.Toaster })),
   { ssr: false }
@@ -78,7 +73,6 @@ export default function RootLayout({
         <Providers>
           <TooltipProvider>
             <Sonner />
-            <AnimatedBackground />
             {children}
           </TooltipProvider>
         </Providers>

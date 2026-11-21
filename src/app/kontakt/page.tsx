@@ -1,12 +1,9 @@
 import type { Metadata } from 'next';
-import NavbarNext from '@/components/layout/NavbarNext';
-import Footer from '@/components/layout/Footer';
-import Contact from '@/components/sections/Contact';
-import PageHeader from '@/components/sections/PageHeader';
-import { Mail, Phone, Globe, Building, CreditCard, FileText } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
-import { Card, CardContent } from '@/components/ui/card';
-
+import { Phone, Mail, MapPin, ArrowUpRight, ChevronDown } from 'lucide-react';
+import SiteShell from '@/components/redesign/SiteShell';
+import ContactOffer from '@/components/redesign/ContactOffer';
+import { PageIntro } from '@/components/redesign/PageParts';
+import styles from '@/components/redesign/redesign.module.css';
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/kontakt';
 
@@ -28,141 +25,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function KontaktPage() {
-  return (
-    <>
-      <NavbarNext />
-      <main id="main-content" className="pt-20">
-        <PageHeader
-          title="Kontaktujte nás"
-          subtitle="Sme tu pre vás v prípade akýchkoľvek otázok"
-        />
 
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16">
-            <div className="glassmorphism rounded-xl p-8 mb-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">Kontaktné údaje</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <Building size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Adresa</h3>
-                        <p>ALCO.SK, s.r.o.</p>
-                        <p>Malé Stankovce 237</p>
-                        <p>Trenčianske Stankovce 913 11</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <Phone size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Telefón</h3>
-                        <p>
-                          <a href="tel:+421911911876" className="hover:text-primary">
-                            +421 911 911 876
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <Mail size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Email</h3>
-                        <p>
-                          <a
-                            href="mailto:info@ochranavozidiel.sk"
-                            className="hover:text-primary"
-                          >
-                            info@ochranavozidiel.sk
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <Globe size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Web</h3>
-                        <p>
-                          <a
-                            href={SITE_URL}
-                            className="hover:text-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            www.autoalarmy-trencin.sk
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">Firemné údaje</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <FileText size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Identifikačné údaje</h3>
-                        <p>IČO: 45601259</p>
-                        <p>IČ-DPH: SK2023064032</p>
-                        <p>Mgr. Ladislav Husár – konateľ</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <CreditCard size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Bankové spojenie</h3>
-                        <p>Tatra banka, a.s.</p>
-                        <p>IBAN: SK8011000000002929839541</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mr-4 bg-primary/10 p-3 rounded-lg text-primary">
-                        <FileText size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Licencia</h3>
-                        <p>
-                          Licencia na prevádzkovanie technickej služby vydaná Krajským
-                          riaditeľstvom policajného zboru Trenčín pod číslom: PT-001122
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-10 flex justify-center">
-                <Card className="w-full max-w-prose mx-auto bg-secondary/30 border border-primary/10">
-                  <CardContent className="p-6 text-center">
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Spoločnosť ALCO.SK, s.r.o. je zapísaná v Obchodnom registri Okresného
-                      súdu Trenčín,<br />
-                      Oddiel: Sro, Vložka číslo: 23214/R
-                    </p>
-                    <Separator className="my-3 bg-primary/10 mx-auto w-2/3" />
-                    <p className="text-sm text-muted-foreground">
-                      Spoločnosť ALCO.SK, s.r.o. je platcom DPH
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-            <Contact />
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-}
+export default function ContactPage(){return <SiteShell quoteHref="#ponuka">
+  <PageIntro eyebrow="KONTAKT" title="Porozprávajme sa." accent="O vašom aute." description="Vyberieme vhodné riešenie, vysvetlíme možnosti a dohodneme ďalší postup. Nájdete nás v Trenčianskych Stankovciach pri Trenčíne." cta="Napísať nezáväzný dopyt"/>
+  <section className={`${styles.pageContainer} ${styles.contactCards}`} aria-label="Kontaktné údaje">
+    <a href="tel:+421911911876"><Phone size={24}/><small>ZAVOLAJTE NÁM</small><h2>0911 911 876</h2><p>Možnosti prejdeme aj telefonicky.</p><ArrowUpRight size={19}/></a>
+    <a href="mailto:info@ochranavozidiel.sk"><Mail size={24}/><small>NAPÍŠTE NÁM</small><h2>info@ochranavozidiel.sk</h2><p>Vaše otázky aj údaje o vozidle.</p><ArrowUpRight size={19}/></a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Mal%C3%A9%20Stankovce%20237%2C%20Tren%C4%8Dianske%20Stankovce" target="_blank" rel="noopener noreferrer"><MapPin size={24}/><small>KDE NÁS NÁJDETE</small><h2>Malé Stankovce 237</h2><p>913 11 Trenčianske Stankovce · Otvoriť mapu</p><ArrowUpRight size={19}/></a>
+  </section>
+  <div id="contact"><ContactOffer/></div>
+  <section id="firemne-udaje" className={`${styles.pageContainer} ${styles.contentSection} ${styles.companySection}`}><div className={styles.contentHeading}><p className={styles.eyebrow}>TRANSPARENTNE A NA JEDNOM MIESTE</p><h2>Firemné údaje</h2><p>ALCO.SK, s.r.o.<br/>Mgr. Ladislav Husár — konateľ</p></div><div><dl className={styles.companyDetails}><div><dt>Sídlo</dt><dd>Malé Stankovce 237<br/>913 11 Trenčianske Stankovce</dd></div><div><dt>IČO</dt><dd>45601259</dd></div><div><dt>IČ DPH</dt><dd>SK2023064032</dd></div><div><dt>Obchodný register</dt><dd>Oddiel Sro, vložka 23214/R</dd></div><div><dt>Licencia technickej služby</dt><dd>PT 003641 · KR PZ Trenčín</dd></div></dl><details className={styles.billingDetails}><summary>Bankové spojenie <ChevronDown size={17}/></summary><p>Tatra banka, a.s.<br/>IBAN: SK8011000000002929839541</p></details></div></section>
+</SiteShell>;}

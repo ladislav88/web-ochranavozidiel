@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
-import NavbarNext from '@/components/layout/NavbarNext';
-import Footer from '@/components/layout/Footer';
-import PageHeader from '@/components/sections/PageHeader';
-import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
+import ServicePage from '@/components/redesign/ServicePage';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 const PAGE_URL = SITE_URL + '/pasivny-monitoring';
@@ -25,28 +22,4 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PasivnyMonitoringPage() {
-  return (
-    <>
-      <NavbarNext />
-      <main id="main-content" className="pt-20 divide-y divide-zinc-900/30">
-        <PageHeader
-          title="Pasívny monitoring"
-          subtitle="GPS a GSM lokalizácia vozidiel"
-        />
-        <section className="section-container">
-          <div className="max-w-prose mx-auto text-muted-foreground space-y-4">
-            <p>
-              Pasívny monitoring umožňuje sledovať polohu vozidla a prijímať upozornenia. Ideálny doplnok k sofistikovanému zabezpečeniu.
-            </p>
-            <p>
-              Pre bližšie informácie nás neváhajte kontaktovať.
-            </p>
-          </div>
-        </section>
-        <TechnicalSpecifications />
-      </main>
-      <Footer />
-    </>
-  );
-}
+export default function Page() {return <ServicePage service="gps"/>;}
