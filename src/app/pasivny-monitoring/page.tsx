@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Pasívny monitoring | Autoalarmy Trenčín',
     description: 'Pasívny monitoring, GPS lokalizácia vozidiel. Ochrana vozidiel Trenčín.',
     url: PAGE_URL,
-    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: SITE_URL + '/alco-social-preview-v2.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     title: 'Pasívny monitoring | Autoalarmy Trenčín',

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       'Sofistikované zabezpečenie IGLA, autoalarmy, tajné vypínače. Ochrana vozidiel Trenčín.',
     url: PAGE_URL,
-    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: SITE_URL + '/alco-social-preview-v2.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     title: 'Sofistikované zabezpečenie vozidiel | Autoalarmy Trenčín',
