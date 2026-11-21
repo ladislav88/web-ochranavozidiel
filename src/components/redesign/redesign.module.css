@@ -37,3 +37,5 @@
 .site .navDropdownPanel{max-width:none;width:330px}.navDropdownPanel>a>span{min-width:0;flex:1}
 
 .serviceChoice label{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0}.serviceChoice label>svg{flex-shrink:0}.serviceChoice label>span{min-width:0}@media(max-width:767px){.serviceChoice label{flex-direction:column;gap:5px}.serviceChoice label>svg{width:18px;height:18px}}
+
+.footerContact .visitNote{font-size:12px;line-height:1.7;color:#a5aab3;margin:6px 0 0;max-width:280px}.companyDetails dd small{font-size:12px;color:#a5aab3}
