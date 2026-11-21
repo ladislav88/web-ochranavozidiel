@@ -8,6 +8,7 @@ import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import Experience from './Experience';
 import WelcomeLights from './WelcomeLights';
+import { SecurityFilmSection } from './SecurityFilm';
 import styles from './redesign.module.css';
 
 export default function Redesign() {
@@ -24,6 +25,7 @@ export default function Redesign() {
       </section>
       <div className={styles.benefits}><div><LockKeyhole/><span><b>Ďalšia vrstva ochrany</b><small>Samotný kľúč nemusí stačiť.</small></span></div><div><Fingerprint/><span><b>Diskrétne riešenie</b><small>Autorizácia tlačidlami vo vozidle.</small></span></div><div><Wrench/><span><b>Odborná montáž</b><small>Výber, inštalácia aj vysvetlenie obsluhy.</small></span></div></div>
       <section id="riesenia" className={styles.solutions}><div className={styles.sectionIntro}><div><p className={styles.eyebrow}>VYBERTE SI SVOJU ISTOTU</p><h2>Tri riešenia.<br className={styles.mobileBreak}/> Jedna dobrá adresa.</h2></div><p>Od ochrany pred krádežou po pohodlnejšie parkovanie.<br/>Vyberieme to, čo dáva zmysel pre vaše auto.</p></div><div className={styles.serviceGrid}>{services.map(({id,name,label,icon:Icon,text,href})=><article key={id} className={`${styles.serviceCard} ${id==='igla'?styles.featured:''}`}><div className={styles.serviceTop}><Icon size={29} strokeWidth={1.4}/><span>{label}</span></div><h3>{name}</h3><p>{text}</p><div className={styles.serviceBottom}><a href="#ponuka" onClick={()=>selectService(id)}>Mám záujem</a><a href={href} className={styles.detailLink}>Viac o riešení</a></div></article>)}</div></section>
+      <SecurityFilmSection/>
       <div className={styles.objectBridge}><a href="/zabezpecenie-objektov"><Building2 size={22}/><span><b>Chránime aj váš domov a firmu.</b><small>Zabezpečenie objektov od ALCO.SK</small></span><ArrowUpRight size={20}/></a></div>
       <section id="montaz" className={styles.install}><div className={styles.installHeading}><p className={styles.eyebrow}>OSOBNE. ODBORNE. BEZ ZBYTOČNOSTÍ.</p><h2>Od prvého kontaktu<br/>po bezpečnejšiu jazdu.</h2><a href="/certifikaty" className={styles.textLink}>Spoznajte ALCO.SK</a></div><div className={styles.installSteps}>{[['Vyberieme riešenie','Overíme možnosti podľa vášho vozidla a vysvetlíme vám rozdiely.'],['Dohodneme montáž','Potvrdíme cenu aj termín. Vopred viete, s čím počítať.'],['Odovzdáme s vysvetlením','Ukážeme obsluhu a zostaneme vaším kontaktom pre ďalšiu podporu.']].map(([title,text])=><div key={title}><Check size={18}/><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></section>
       <Experience/>
