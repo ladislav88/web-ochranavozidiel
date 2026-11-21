@@ -2,18 +2,30 @@ import { Fingerprint, ShieldCheck, KeyRound, MapPin, Navigation, Smartphone, Sca
 
 export const serviceContent = {
   igla: {
-    id:'igla',path:'/sofistikovane-zabezpecenie',eyebrow:'ZABEZPEČENIE VOZIDLA',title:'Zabezpečenie IGLA.',accent:'Váš kľúč nemusí stačiť.',
-    description:'Digitálny imobilizér pridáva ďalšiu autorizáciu pred jazdou. Možnosti pre vaše auto overíme a systém odborne namontujeme v Trenčíne.',
-    featuresTitle:'Diskrétna ochrana v každodennom živote.',features:[
-      {icon:ShieldCheck,title:'Ďalšia vrstva ochrany',text:'K pôvodnému zabezpečeniu vozidla pribudne samostatná autorizácia. Samotné získanie kľúča tak nemusí stačiť na odjazd.'},
-      {icon:Fingerprint,title:'Autorizácia, ktorú poznáte vy',text:'Tajná sekvencia sa zadáva pomocou vybraných tlačidiel vo vozidle. Konkrétny spôsob závisí od auta a zvoleného systému.'},
-      {icon:KeyRound,title:'Prirodzená súčasť jazdy',text:'Pri odovzdaní si nastavenie spoločne prejdeme. Vyskúšate si bežné používanie aj postup, keď vozidlo odovzdávate do servisu.'},
+    id:'igla',path:'/sofistikovane-zabezpecenie',eyebrow:'IGLA · DIGITÁLNA OCHRANA VOZIDLA',title:'Vaše auto.',accent:'Len s vaším súhlasom.',
+    description:'Certifikovaný partner IGLA v Trenčíne s 26 rokmi praxe. Montujeme vyššiu radu digitálneho imobilizéra s Bluetooth príveskami a vlastným PIN-om. Od 480 € bez DPH vrátane BT príveskov a odbornej montáže.',
+    featuresTitle:'Originálny kľúč už nemusí stačiť.',features:[
+      {icon:ShieldCheck,title:'Ochrana pred neoprávneným odjazdom',text:'IGLA pridáva nezávislé overenie vodiča. Bez platnej autorizácie digitálne blokuje odjazd spôsobom podporovaným konkrétnym vozidlom.'},
+      {icon:Fingerprint,title:'Bluetooth prívesok alebo vlastný PIN',text:'Stačí jeden spôsob autorizácie. Pohodlné overenie príveskom dopĺňa vlastný PIN cez pôvodné tlačidlá vozidla.'},
+      {icon:KeyRound,title:'Automaticky pripravená chrániť',text:'Po vypnutí zapaľovania sa ochrana aktivuje automaticky. Bez ďalšieho mesačného paušálu za používanie imobilizéra.'},
     ],
-    detailEyebrow:'AKO FUNGUJE DIGITÁLNY IMOBILIZÉR',detailTitle:'Rozdiel je v autorizácii.',
-    paragraphs:['IGLA dopĺňa pôvodné zabezpečenie vozidla o ďalší autorizačný krok. Bez správnej autorizácie obmedzí možnosť neoprávnenej jazdy spôsobom, ktorý podporuje konkrétne vozidlo a verzia systému.','Pri návrhu zohľadníme značku, model, rok výroby aj spôsob štartovania. Vysvetlíme vám, čo vybrané riešenie dokáže a ako ho budete používať.'],
-    points:[{title:'Najprv overenie kompatibility',text:'Zvolíme riešenie podľa konkrétneho vozidla, nie iba podľa názvu značky.'},{title:'Diskrétna montáž a nastavenie',text:'Umiestnenie aj spôsob zapojenia prispôsobíme technickým možnostiam auta.'},{title:'Vysvetlenie obsluhy',text:'Prejdeme autorizáciu, odovzdanie do servisu aj postup pri zabudnutej sekvencii.'},{title:'Kontakt aj po montáži',text:'S otázkami k používaniu sa môžete obrátiť priamo na nás.'}],
-    note:'Žiadny systém nepredstavuje absolútnu ochranu pred krádežou. Rozsah funkcií a vhodnosť overujeme individuálne.',
-    faq:[{q:'Dá sa IGLA namontovať do môjho auta?',a:'Závisí od značky, modelu, roku výroby a výbavy. Vyplňte údaje o vozidle vo formulári. Kompatibilitu aj dostupné riešenie vám potvrdíme pred dohodnutím montáže.'},{q:'Potrebujem pri jazde ďalší ovládač?',a:'Základom digitálnej autorizácie môže byť sekvencia zadaná tlačidlami vo vozidle. Presný spôsob obsluhy a prípadné ďalšie možnosti závisia od vybraného systému.'},{q:'Čo ak auto dávam do servisu alebo zabudnem sekvenciu?',a:'Pri odovzdaní vysvetlíme servisný režim a postup pri strate autorizačných údajov podľa konkrétnej verzie systému. Tieto postupy si prejdeme ešte pri montáži.'},{q:'Koľko stojí montáž?',a:'Cena závisí od vozidla a zvoleného riešenia. Po overení údajov vám pripravíme konkrétnu ponuku a pred montážou potvrdíme rozsah práce aj termín.'}],
+    detailEyebrow:'DIGITÁLNE BLOKOVANIE · ROKY VÝVOJA',detailTitle:'GPS hľadá polohu. IGLA overuje vodiča.',
+    paragraphs:['Kým GPS lokalizátor pomáha zistiť polohu vozidla, IGLA rieši oprávnenie na odjazd. Digitálne blokovanie cez dátovú zbernicu nezávisí od GPS ani mobilného signálu. Ak nie je dostupná bezdrôtová autorizácia príveskom, zostáva možnosť vlastného PIN-u.','Systém nastavujeme pre konkrétny model a výbavu auta. Podľa možností vozidla môže blokovať štartovanie, chod motora alebo automatickú prevodovku. Preto najprv overíme vaše auto a až potom potvrdíme zostavu a cenu.'],
+    points:[{title:'Vyššia rada s BT príveskami',text:'Komfortná bezdotyková autorizácia príveskom alebo vlastný PIN cez pôvodné tlačidlá. BT prívesky sú zahrnuté už v cene od 480 € bez DPH s montážou.'},{title:'Skrytá montáž spravidla 2–3 hodiny',text:'Minimálny zásah do auta, nenápadný modul a nízky odber. Presný čas závisí od vozidla a rozsahu zostavy.'},{title:'Servisný režim a núdzová karta',text:'Vysvetlíme odovzdanie auta do servisu aj núdzové odblokovanie majiteľom pomocou jeho bezpečnostnej karty.'},{title:'Homologizácia pre EÚ',text:'IGLA je homologizovaná a certifikovaná pre použitie vo vozidlách v EÚ. Dokumentáciu a požiadavky konkrétnej poisťovne prejdeme pred montážou.'}],
+    note:'Doplnkové funkcie, napríklad dotiahnutie okien, úprava štart-stop alebo doplnenie GPS, závisia od vozidla a zvolenej zostavy. Konkrétny rozsah si potvrdíme v ponuke.',
+    faq:[
+      {q:'Funguje IGLA v mojom aute?',a:'Distribútor uvádza podporu viac ako 1 500 modelov vo viac ako 40 značkách. Pošlite značku, model a rok výroby. Kompatibilitu, výbavu aj podporovanú verziu vám overíme. Ak model ešte nie je podporovaný, preveríme možnosť doplnenia podpory u výrobcu.'},
+      {q:'Prečo doplniť zabezpečenie z výroby?',a:'Originálne zabezpečenie nemusí odolať každému spôsobu neoprávneného použitia auta. IGLA pridáva samostatnú autorizáciu vodiča, takže samotné získanie alebo napodobnenie originálneho kľúča nemusí stačiť na odjazd.'},
+      {q:'Ako sa IGLA ovláda?',a:'Ponúkame vyššiu radu s Bluetooth príveskami. Autorizovať sa môžete Bluetooth príveskom alebo vlastným PIN-om cez podporované pôvodné tlačidlá auta. Stačí jeden z týchto spôsobov.'},
+      {q:'Čo ak sa vybije batéria prívesku?',a:'Zostáva váš PIN cez originálne tlačidlá. Nepotrebuje batériu prívesku, GPS ani mobilné dáta. Konkrétnu sekvenciu a spôsob potvrdenia si vyskúšate pri odovzdaní auta.'},
+      {q:'Ako funguje núdzové odblokovanie?',a:'Majiteľ môže použiť vlastnú bezpečnostnú kartu s núdzovým kódom. Presný postup podľa vašej verzie systému vám vysvetlíme pri montáži. Kartu a autorizačné údaje odovzdáme priamo vám.'},
+      {q:'Môžem auto odovzdať do servisu alebo na STK?',a:'Áno. Pred odovzdaním zapnete servisný režim podľa postupu vašej verzie IGLA. Servis tak môže s vozidlom pracovať bez prezradenia vášho osobného PIN-u. Obsluhu si spoločne prejdeme.'},
+      {q:'Je IGLA odolná voči rušičkám?',a:'Digitálne blokovanie nevyužíva GPS ani mobilnú sieť. Ak nie je dostupná bezdrôtová autorizácia príveskom, je možné použiť vlastný PIN cez tlačidlá. Rozsah ochrany závisí od auta a správnej montáže.'},
+      {q:'Ako dlho trvá montáž a čo záruka auta?',a:'Spravidla 2–3 hodiny, pri niektorých autách dlhšie. IGLA umožňuje digitálne blokovanie bez potreby prerušiť pôvodné blokované obvody. Konkrétny zásah aj prípadné požiadavky predajcu na záruku prejdeme pred montážou.'},
+      {q:'Akceptuje systém moja poisťovňa?',a:'IGLA je homologizovaná a certifikovaná pre použitie v EÚ. Pred montážou prejdeme požadované doklady a podmienky vašej konkrétnej poistnej zmluvy, aby dodatočné zabezpečenie zodpovedalo jej požiadavkám.'},
+      {q:'Čo znamená údaj 0 krádeží?',a:'Ide o počet ukradnutých zabezpečených vozidiel podľa evidencie ALCO.SK, ktorú uvádzame pri našej praxi. Je to údaj z našich skúseností, nie prísľub absolútnej ochrany za všetkých okolností.'},
+      {q:'Koľko stojí IGLA s montážou?',a:'Naša ponuka začína od 480 € bez DPH vrátane Bluetooth príveskov a odbornej montáže. Kompatibilitu, konkrétnu zostavu a prípadné doplnky potvrdíme v ponuke pred montážou. Za používanie samotného imobilizéra sa neplatí mesačný paušál.'},
+    ],
   },
   gps: {
     id:'gps',path:'/pasivny-monitoring',eyebrow:'GPS MONITORING',title:'Majte prehľad.',accent:'Aj keď pri aute nie ste.',

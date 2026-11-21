@@ -6,14 +6,14 @@ const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 export const metadata: Metadata = {
   title: { absolute: 'Autoalarmy Trenčín | Zabezpečenie vozidiel IGLA' },
   description:
-    'Zabezpečenie vozidiel IGLA, GPS monitoring a parkovacie senzory. Montáž v Trenčíne. Vyžiadajte si ponuku pre svoje auto.',
+    'Ochrana vozidiel pred krádežou IGLA. Certifikovaná montáž v Trenčíne, vyššia rada s BT príveskami od 480 € bez DPH. Overíme vaše auto.',
   alternates: {
     canonical: SITE_URL + '/',
   },
   openGraph: {
     title: 'Zabezpečenie vozidiel proti krádeži | Autoalarmy Trenčín',
     description:
-      'Ochrana vozidiel Trenčín. Sofistikované zabezpečenie IGLA, autoalarmy, pasívny monitoring.',
+      'Ochrana vozidiel pred krádežou. IGLA s BT príveskami a odbornou montážou v Trenčíne od 480 € bez DPH.',
     url: SITE_URL + '/',
     images: [{ url: SITE_URL + '/alco-social-preview-v2.jpg', width: 1200, height: 630 }],
   },
