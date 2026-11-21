@@ -1,19 +1,10 @@
 import type { Metadata } from 'next';
-import NavbarNext from '@/components/layout/NavbarNext';
-import Footer from '@/components/layout/Footer';
-import About from '@/components/sections/About';
-import Contact from '@/components/sections/Contact';
-import Reviews from '@/components/sections/Reviews';
-import HowItWorksSections from '@/components/sections/HowItWorksSections';
-import TechnicalSpecifications from '@/components/sections/TechnicalSpecifications';
-import StatsTimeline from '@/components/sections/StatsTimeline';
-import Hero from '@/components/sections/Hero';
-import HomePageClient from './HomePageClient';
+import Redesign from '@/components/redesign/Redesign';
 
 const SITE_URL = 'https://www.autoalarmy-trencin.sk';
 
 export const metadata: Metadata = {
-  title: 'Autoalarmy Trenčín | Zabezpečenie vozidiel IGLA',
+  title: { absolute: 'Autoalarmy Trenčín | Zabezpečenie vozidiel IGLA' },
   description:
     'Zabezpečenie vozidiel IGLA, GPS monitoring a parkovacie senzory. Montáž v Trenčianskych Stankovciach pri Trenčíne. Vyžiadajte si ponuku pre svoje auto.',
   alternates: {
@@ -31,23 +22,4 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
-  return (
-    <div className="w-full overflow-x-hidden">
-      <NavbarNext />
-      <main id="main-content" className="w-full overflow-x-hidden">
-        <Hero />
-        <div className="space-y-0 divide-y divide-zinc-900/30 w-full">
-          <About />
-          <StatsTimeline />
-          <HowItWorksSections />
-          <TechnicalSpecifications />
-          <Reviews />
-          <Contact />
-        </div>
-      </main>
-      <Footer />
-      <HomePageClient />
-    </div>
-  );
-}
+export default function HomePage() { return <Redesign/>; }

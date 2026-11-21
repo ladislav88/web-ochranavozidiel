@@ -1,7 +1,6 @@
 
 import emailjs from '@emailjs/browser';
 
-// Update EmailData interface to make the required fields explicit
 export interface EmailData {
   name: string;
   email: string;
@@ -19,14 +18,32 @@ export interface EmailData {
   customEngineType?: string;
 }
 
-export const sendEmail = async (data: EmailData) => {
+let sendQueue: Promise<unknown> = Promise.resolve();
+let lastAttempt = 0;
+
+export const sendEmail = (data: EmailData) => {
+  const attempt = sendQueue.catch(() => undefined).then(async () => {
+    // EmailJS accepts one request per second, including draft followed by submit.
+    const delay = Math.max(0, 1200 - (Date.now() - lastAttempt));
+    if (delay) await new Promise(resolve => setTimeout(resolve, delay));
+    lastAttempt = Date.now();
+    return deliver(data);
+  });
+  sendQueue = attempt;
+  return attempt;
+};
+
+const deliver = async (data: EmailData) => {
   const templateParams = {
     subject: data.subject || 'Dopyt z webu',
     from_name: data.name,
     from_email: data.email,
     phone: data.phone,
     city: data.city || '',
-    message: data.message || '',
+    message: [data.message || '', '', `Vozidlo: ${data.vehicleBrand || ''} ${data.vehicleModel || ''}`.trim(),
+      `Rok / mesiac: ${data.vehicleYear || ''} ${data.vehicleMonth || ''}`.trim(),
+      `Štartovanie: ${data.startMethod || 'neuvedené'}`, `Motorizácia: ${data.engineType || 'neuvedená'}`,
+      `Mesto: ${data.city || 'neuvedené'}`, `Telefón: ${data.phone || 'neuvedený'}`, `E-mail: ${data.email || 'neuvedený'}`].join('\n'),
     vehicle_brand: data.vehicleBrand || '',
     vehicle_model: data.vehicleModel || '',
     vehicle_year: data.vehicleYear || '',
@@ -45,7 +62,7 @@ export const sendEmail = async (data: EmailData) => {
     const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
     return response;
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Email delivery failed');
     throw error;
   }
 };
