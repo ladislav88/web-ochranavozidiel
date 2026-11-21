@@ -17,7 +17,7 @@ export default function Redesign() {
     <SiteHeader quoteHref="#ponuka"/>
     <main id="main-content">
       <section className={styles.hero} aria-labelledby="hero-heading">
-        <div className={styles.heroPhoto}><img src="/hero-black-suv.webp" alt="Ilustračná vizualizácia čierneho SUV so zapnutými svetlami" width="1440" height="960" fetchPriority="high"/><WelcomeLights/></div>
+        <div className={styles.heroPhoto}><WelcomeLights/></div>
         <div className={styles.heroShade}/>
         <div className={styles.heroContent}><p className={styles.eyebrow}><span/> OCHRANA VOZIDIEL · TRENČÍN A OKOLIE</p><h1 id="hero-heading">Vaše auto.<br/><em>V bezpečí.</em></h1><p className={styles.heroLead}>Inteligentné zabezpečenie IGLA.<br/>Odborná montáž. Pokoj pri každom parkovaní.</p><div className={styles.heroButtons}><a href="#ponuka" className={styles.primary}>Vybrať zabezpečenie</a><a href="tel:+421911911876" className={styles.secondary}><Phone size={17}/>Poradiť sa telefonicky</a></div><p className={styles.location}><MapPin size={15}/>Montážna dielňa · Trenčín</p></div>
         <div className={styles.heroCaption}><ShieldCheck size={19}/><span>IGLA<span>DIGITÁLNY IMOBILIZÉR</span></span></div>
