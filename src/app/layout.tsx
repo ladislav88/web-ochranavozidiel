@@ -39,10 +39,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon-alco-192.png?v=20261121', type: 'image/png', sizes: '192x192' },
-      { url: '/favicon-alco-32.png?v=20261121', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-alco-rounded-192.png?v=20261121b', type: 'image/png', sizes: '192x192' },
+      { url: '/favicon-alco-rounded-32.png?v=20261121b', type: 'image/png', sizes: '32x32' },
     ],
-    shortcut: '/favicon-alco-32.png?v=20261121',
+    shortcut: '/favicon-alco-rounded-32.png?v=20261121b',
     apple: [{ url: '/apple-touch-icon.png?v=20261121', sizes: '180x180', type: 'image/png' }],
   },
   twitter: {
