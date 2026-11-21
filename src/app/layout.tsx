@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     siteName: 'Autoalarmy Trenčín',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
+  icons: {
+    icon: [{ url: '/alco-icon.png', type: 'image/png' }, { url: '/favicon.ico', sizes: 'any' }],
+    shortcut: '/alco-icon.png',
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   twitter: {
     card: 'summary_large_image',
   },
