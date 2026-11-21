@@ -12,6 +12,7 @@ const ROUTES: Array<{
   { path: '/pasivny-monitoring', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/parkovacie-senzory', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/certifikaty', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/bezklucovy-pristup', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/z-praxe', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/kontakt', changeFrequency: 'monthly', priority: 0.5 },
   { path: '/zabezpecenie-objektov', changeFrequency: 'monthly', priority: 0.6 },
