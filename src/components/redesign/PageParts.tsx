@@ -9,7 +9,7 @@ import introStyles from './pageIntro.module.css';
 export type FAQItem={q:string;a:string};
 export function PageIntro({eyebrow,title,accent,description,visual,cta='Overiť možnosti pre moje auto',ctaHref}:{eyebrow:string;title:string;accent:string;description:string;visual?:'igla'|'gps'|'senzory'|'about'|'objekty';cta?:string;ctaHref?:string}){return <section className={`${styles.pageContainer} ${styles.pageIntro} ${!visual?styles.textOnlyIntro:''} ${(visual==='igla'||visual==='gps'||visual==='senzory')?introStyles.aligned:''}`}>
   <nav className={styles.breadcrumbs} aria-label="Drobková navigácia"><a href="/">Domov</a><span>/</span><span>{eyebrow}</span></nav><div><p className={styles.eyebrow}>{eyebrow}</p><h1>{title}<br/><em>{accent}</em></h1><p className={styles.introDescription}>{description}</p><div className={styles.introActions}><a href={ctaHref||(visual==='about'?'/kontakt#ponuka':'#ponuka')} className={styles.primary}>{cta}<ArrowRight size={16}/></a><a href="tel:+421911911876" className={styles.introPhone}><Phone size={16}/>0911 911 876</a></div></div>
-  {visual&&((visual==='gps'||visual==='igla')?<ServiceFilm kind={visual}/>:<SolutionVisual type={visual}/>)}
+  {visual&&((visual==='gps'||visual==='igla')?<ServiceFilm kind={visual==='igla'?'iglaGuide':visual}/>:<SolutionVisual type={visual}/>)}
 </section>;}
 export function SolutionVisual({type}:{type:'igla'|'gps'|'senzory'|'about'|'objekty'}){if(type==='objekty')return <ObjectSecurityVisual/>;if(type==='senzory')return <ParkingFilm/>;return <div className={`${styles.solutionVisual} ${styles[type+'Visual']}`}>
   <div className={styles.visualTag}><span/>{type==='igla'?'DIGITÁLNA AUTORIZÁCIA':type==='gps'?'POLOHA VOZIDLA':'ALCO.SK · TRENČÍN A OKOLIE'}</div>
