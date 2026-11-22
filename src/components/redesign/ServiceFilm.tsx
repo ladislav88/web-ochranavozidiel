@@ -4,8 +4,9 @@ import { Play, Pause, Volume2, ShieldCheck } from 'lucide-react';
 import styles from './parkingFilm.module.css';
 const films={
  iglaGuide:{base:'igla-kazdy-den-v3',title:'IGLA každý deň – prívesok, PIN a digitálna ochrana',headline:'Ochrana, ktorá zapadne do vášho dňa.',subline:'Bluetooth prívesok, vlastný PIN a odborné odovzdanie v Trenčíne.'},
+ gpsDemo:{base:'gps-aplikacia-v1',title:'GPS monitoring – ukážka ovládania aplikácie',headline:'Pozrite si ovládanie aplikácie.',subline:'Výber auta, história jázd a trasa na mape.'},
  parking:{base:'parking-alco',title:'Parkovacie snímače od ALCO.SK Trenčín',headline:'Záruka kvality overená praxou.',subline:'Značkové snímače. Odborná montáž v Trenčíne.'},
- gps:{base:'gps-alco-v3',title:'GPS monitoring – vozidlá, trasy a prehľady od ALCO.SK Trenčín',headline:'GPS monitoring bez mesačného paušálu.',subline:'Od 280 € bez DPH s montážou. Stačí vlastná SIM karta.'},
+ gps:{base:'gps-alco-v2',title:'GPS monitoring od ALCO.SK Trenčín',headline:'GPS monitoring bez mesačného paušálu.',subline:'Od 280 € bez DPH s montážou. Stačí vlastná SIM karta.'},
  igla:{base:'igla-pribeh-v7',title:'IGLA – prezentácia ochrany vozidla od ALCO.SK Trenčín',headline:'Certifikovaný partner IGLA · Trenčín',subline:'Od 480 € bez DPH vrátane BT príveskov a montáže.'},
 };
 export default function ServiceFilm({kind}:{kind:keyof typeof films}){
@@ -13,7 +14,7 @@ export default function ServiceFilm({kind}:{kind:keyof typeof films}){
  const player=useRef<HTMLVideoElement>(null);
  const [withSound,setWithSound]=useState(false);const [paused,setPaused]=useState(false);const [blocked,setBlocked]=useState(false);const [failed,setFailed]=useState(false);
  useEffect(()=>{const video=player.current;if(!video)return;let active=true;video.muted=true;video.play()?.catch(()=>{if(active){setBlocked(true);setPaused(true)}});return()=>{active=false};},[]);
- function playWithSound(){const video=player.current;if(!video)return;setFailed(false);video.currentTime=0;video.muted=false;video.loop=false;setWithSound(true);video.play()?.catch(()=>{setFailed(true);setWithSound(false);setBlocked(true);setPaused(true);video.muted=true});}
+ function playWithSound(){const video=player.current;if(!video)return;document.querySelectorAll('video').forEach(other=>{if(other!==video){other.pause();other.muted=true;}});setFailed(false);video.currentTime=0;video.muted=false;video.loop=false;setWithSound(true);video.play()?.catch(()=>{setFailed(true);setWithSound(false);setBlocked(true);setPaused(true);video.muted=true});}
  function togglePreview(){const video=player.current;if(!video)return;if(video.paused){video.play()?.catch(()=>setBlocked(true))}else{video.pause()}}
  return <figure className={styles.panel} aria-label={title}><div className={styles.frame}>
  <video ref={player} autoPlay muted={!withSound} loop={!withSound} controls={withSound} playsInline preload="metadata" tabIndex={withSound?0:-1} aria-label={title} poster={`/video/${base}-poster.webp`} onPlay={()=>{setPaused(false);setBlocked(false)}} onPause={()=>setPaused(true)}><source src={`/video/${base}.mp4`} type="video/mp4"/><track kind="captions" src={`/video/${base}-sk.vtt`} srcLang="sk" label="Slovenčina"/>Váš prehliadač nepodporuje prehrávanie videa.</video>
