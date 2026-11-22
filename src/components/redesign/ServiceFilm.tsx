@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Play, Pause, Volume2, ShieldCheck } from 'lucide-react';
 import styles from './parkingFilm.module.css';
 const films={
- iglaGuide:{base:'igla-kazdy-den',title:'IGLA každý deň – prívesok, PIN a digitálna ochrana',headline:'Ochrana, ktorá zapadne do vášho dňa.',subline:'Bluetooth prívesok, vlastný PIN a odborné odovzdanie v Trenčíne.'},
+ iglaGuide:{base:'igla-kazdy-den-v2',title:'IGLA každý deň – prívesok, PIN a digitálna ochrana',headline:'Ochrana, ktorá zapadne do vášho dňa.',subline:'Bluetooth prívesok, vlastný PIN a odborné odovzdanie v Trenčíne.'},
  parking:{base:'parking-alco',title:'Parkovacie snímače od ALCO.SK Trenčín',headline:'Záruka kvality overená praxou.',subline:'Značkové snímače. Odborná montáž v Trenčíne.'},
  gps:{base:'gps-alco-v2',title:'GPS monitoring od ALCO.SK Trenčín',headline:'GPS monitoring bez mesačného paušálu.',subline:'Od 280 € bez DPH s montážou. Stačí vlastná SIM karta.'},
- igla:{base:'igla-pribeh-v5',title:'IGLA – prezentácia ochrany vozidla od ALCO.SK Trenčín',headline:'Certifikovaný partner IGLA · Trenčín',subline:'Od 480 € bez DPH vrátane BT príveskov a montáže.'},
+ igla:{base:'igla-pribeh-v6',title:'IGLA – prezentácia ochrany vozidla od ALCO.SK Trenčín',headline:'Certifikovaný partner IGLA · Trenčín',subline:'Od 480 € bez DPH vrátane BT príveskov a montáže.'},
 };
 export default function ServiceFilm({kind}:{kind:keyof typeof films}){
  const {base,title,headline,subline}=films[kind];
